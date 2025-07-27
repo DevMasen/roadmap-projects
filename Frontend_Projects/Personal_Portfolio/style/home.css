@@ -1,76 +1,83 @@
 /*! Home Styles */
-@import "fonts.css";
-/* .nav-left {
+@import 'fonts.css';
+@import 'variables.css';
+body {
+	padding: 0;
+	margin: 0;
+}
+nav {
+	background-color: var(--white);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.nav-left {
+	padding: 0.5rem;
+	margin: 0.5rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 1rem;
 }
 .logo {
+	width: 3rem;
+	height: 3rem;
+}
+.logo img {
+	width: 100%;
+	height: 100%;
+	border-radius: 0.5rem;
 }
 .name {
+	font-family: montserrat-semi-bold;
 }
 .nav-right {
+	font-family: montserrat-medium;
 }
 .topic-list {
+	padding: 1rem;
+	display: flex;
+	gap: 1rem;
+	justify-content: center;
+	flex-wrap: wrap;
 }
 .topic-item {
+	list-style: none;
 }
 .topic-link {
+	color: var(--gray);
+	text-decoration: none;
 }
-.title {
+.topic-link:hover {
+	font-family: montserrat-semi-bold;
 }
-.title-main {
-}
-.title-more {
-}
-.projects {
-}
-.projects-title {
-}
-.projects-list {
-}
-.project-item {
-}
-.work-experience {
-}
-.work-experience-main {
-}
-.wem-title {
-}
-.wem-reference {
-}
-.wem-explanation {
-}
-.wem-link {
-}
-.work-experience-opensource {
-}
-.weo-title {
-}
-.weo-explanation {
-}
-.weo-link {
-}
-.education {
-}
-.education-title {
-}
-.education-explanation {
-}
-.course-list-title {
-}
-.course-list {
-}
-.course-item {
-}
-.review {
-}
-.review-title {
-}
-.comment {
-}
-.comment-text {
-}
-.person {
-}
-.capacity {
-}
-.copyright {
-} *;
+/* .title {} */
+/* .title-main {} */
+/* .title-more {} */
+/* .projects {} */
+/* .projects-title {} */
+/* .projects-list {} */
+/* .project-item {} */
+/* .work-experience {} */
+/* .work-experience-main {} */
+/* .wem-title {} */
+/* .wem-reference {} */
+/* .wem-explanation {} */
+/* .wem-link {} */
+/* .work-experience-opensource {} */
+/* .weo-title {} */
+/* .weo-explanation {} */
+/* .weo-link {} */
+/* .education {} */
+/* .education-title {} */
+/* .education-explanation {} */
+/* .course-list-title {} */
+/* .course-list {} */
+/* .course-item {} */
+/* .review {} */
+/* .review-title {} */
+/* .comment {} */
+/* .comment-text {} */
+/* .person {} */
+/* .capacity {} */
+/* .copyright {} */
