@@ -1,1 +1,18 @@
 /*! Responsive Layout Codes */
+@media screen and (width <= 576px) {
+	body {
+		background-color: blueviolet;
+	}
+}
+@media screen and (width >= 577px) and (width <= 768px) {
+	body {
+		background-color: brown;
+	}
+}
+@media screen and (width >= 769px) and (width <= 992px) {
+	body {
+		background-color: cadetblue;
+	}
+}
+@media screen and (width >= 993px) {
+}

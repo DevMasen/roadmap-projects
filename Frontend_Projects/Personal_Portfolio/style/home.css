@@ -1,19 +1,29 @@
 /*! Home Styles */
 @import 'fonts.css';
-@import 'variables.css';
+:root {
+	--violet: #7774ff;
+	--gray: #232c35;
+	--white: #eef2f5;
+	--light-gray: #a5bbcb;
+	--black: #000;
+	--blue: #4300ff;
+}
 body {
-	padding: 0;
-	margin: 0;
+	font-family: montserrat-regular;
+}
+a {
+	text-decoration: none;
+	color: var(--blue);
+}
+.container {
+	padding: 0 2rem 0 2rem;
 }
 nav {
-	background-color: var(--white);
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 }
 .nav-left {
-	padding: 0.5rem;
-	margin: 0.5rem;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
@@ -48,36 +58,118 @@ nav {
 	color: var(--gray);
 	text-decoration: none;
 }
-.topic-link:hover {
-	font-family: montserrat-semi-bold;
+header {
+	margin-top: 2rem;
 }
-/* .title {} */
-/* .title-main {} */
-/* .title-more {} */
-/* .projects {} */
-/* .projects-title {} */
-/* .projects-list {} */
+.title {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+.title-main {
+	font-size: 64px;
+	color: var(--gray);
+}
+.title-more {
+	font-size: 24px;
+	color: var(--light-gray);
+}
+main {
+	font-family: montserrat-medium;
+	padding: 1rem;
+	background-color: var(--white);
+	margin-top: 3rem;
+	display: grid !important ;
+	grid-template-columns: 1fr 1.3fr 1fr;
+	border-radius: 1rem;
+}
+.main-title {
+	text-align: center;
+}
+/* .projects {
+} */
+.projects-list {
+	margin-top: 3rem;
+	list-style: none;
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+}
 /* .project-item {} */
-/* .work-experience {} */
+.link-container {
+	width: fit-content;
+}
+.link-container:hover .link-underline {
+	width: 100%;
+}
+.link-underline {
+	background-color: var(--gray);
+	position: relative;
+	width: 0;
+	height: 2px;
+	bottom: 0;
+	left: 0;
+	transition: all 300ms ease-out;
+}
+.project-item a {
+	font-size: 18px;
+}
+.work-experience {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+}
 /* .work-experience-main {} */
 /* .wem-title {} */
 /* .wem-reference {} */
 /* .wem-explanation {} */
 /* .wem-link {} */
 /* .work-experience-opensource {} */
-/* .weo-title {} */
 /* .weo-explanation {} */
 /* .weo-link {} */
 /* .education {} */
-/* .education-title {} */
 /* .education-explanation {} */
 /* .course-list-title {} */
-/* .course-list {} */
-/* .course-item {} */
-/* .review {} */
-/* .review-title {} */
-/* .comment {} */
-/* .comment-text {} */
+.course-list {
+	list-style: circle;
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+}
+.course-item {
+	font-size: 14px;
+}
+footer {
+	margin-top: 3rem;
+	margin-bottom: 3rem;
+}
+.review {
+	background-color: var(--gray);
+	color: var(--white);
+	padding: 1rem;
+	border-radius: 1rem;
+}
+.review-title {
+	text-align: center;
+	font-size: 2rem;
+}
+.comments {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+}
+.comment {
+	margin: 1rem;
+	padding: 2rem;
+	background-color: var(--violet);
+	border-radius: 1rem;
+	line-height: 1.5rem;
+}
+.comment-text {
+	font-family: montserrat-medium;
+	color: var(--black);
+}
 /* .person {} */
 /* .capacity {} */
-/* .copyright {} */
+.copyright p {
+	text-align: center;
+}

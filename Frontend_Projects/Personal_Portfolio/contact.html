@@ -10,8 +10,42 @@
 
 		<title>Contact</title>
 
+		<!-- Favicon Tags -->
+		<link
+			rel="icon"
+			type="image/x-icon"
+			href="./favicon/favicon.ico"
+			sizes="any"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			href="./favicon/favicon-32x32.png"
+			sizes="32x32"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			href="./favicon/favicon-16x16.png"
+			sizes="16x16"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			href="./favicon/android-chrome-192x192.png"
+			sizes="192x192"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			href="./favicon/android-chrome-512x512.png"
+			sizes="512x512"
+		/>
+		<link rel="manifest" href="./favicon/site.webmanifest" />
+
 		<link rel="stylesheet" href="./style/contact.css" />
 		<link rel="stylesheet" href="./style/responsive.css" />
+		<link rel="stylesheet" href="./style/normalize.css" />
 	</head>
 	<body>
 		<h1 class="contact_title">Contact</h1>
@@ -19,24 +53,40 @@
 			<fieldset class="contact_fieldset">
 				<legend class="contact_legend">Contact us</legend>
 				<form class="contact_form" action="">
-					<label class="label" for="name">Name</label>
-					<input class="input" type="text" name="name" id="name" />
-					<br />
-					<br />
-					<label class="label" for="email">Email</label>
-					<input class="input" type="email" name="email" id="email" />
-					<br />
-					<br />
-					<label class="laber" for="message">Message</label>
+					<label class="contact_form_label" for="name">Name</label>
 					<input
-						class="input"
+						class="contact_form_input"
+						type="text"
+						name="name"
+						id="name"
+					/>
+					<br />
+					<br />
+					<label class="contact_form_label" for="email">Email</label>
+					<input
+						class="contact_form_input"
+						type="email"
+						name="email"
+						id="email"
+					/>
+					<br />
+					<br />
+					<label class="contact_form_label" for="message"
+						>Message</label
+					>
+					<input
+						class="contact_form_input"
 						type="text"
 						name="message"
 						id="message"
 					/>
 					<br />
 					<br />
-					<input class="submit_btn" type="submit" value="submit" />
+					<input
+						class="contact_submit-btn"
+						type="submit"
+						value="submit"
+					/>
 				</form>
 			</fieldset>
 		</div>

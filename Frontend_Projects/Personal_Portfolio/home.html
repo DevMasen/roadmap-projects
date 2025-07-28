@@ -6,6 +6,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta name="description" content="Basic HTML Website" />
 		<meta name="robots" content="index, follow" />
+
 		<title>Portfolio Home Page</title>
 
 		<!-- Favicon Tags -->
@@ -43,146 +44,185 @@
 
 		<link rel="stylesheet" href="./style/home.css" />
 		<link rel="stylesheet" href="./style/responsive.css" />
+		<link rel="stylesheet" href="./style/normalize.css" />
 	</head>
 	<body>
-		<nav>
-			<div class="nav-left">
-				<div class="logo">
-					<img src="./img/logo.jpg" alt="LOGO" />
+		<div class="container">
+			<nav>
+				<div class="nav-left">
+					<div class="logo">
+						<img src="./img/logo.jpg" alt="LOGO" />
+					</div>
+					<h2 class="name">Masen Mohseni</h2>
 				</div>
-				<h2 class="name">Masen Mohseni</h2>
-			</div>
-			<div class="nav-right">
-				<ul class="topic-list">
-					<li class="topic-item">
-						<a href="./home.html" class="topic-link">Home</a>
-					</li>
-					<li class="topic-item">
-						<a href="./projects.html" class="topic-link"
-							>Projects</a
-						>
-					</li>
-					<li class="topic-item">
-						<a href="./articles.html" class="topic-link"
-							>Articles</a
-						>
-					</li>
-					<li class="topic-item">
-						<a href="./contact.html" class="topic-link">Contact</a>
-					</li>
-				</ul>
-			</div>
-		</nav>
-		<header>
-			<div class="title">
-				<h1 class="title-main">Frontend Developer</h1>
-				<p class="title-more">
-					html onlu with proper layaout, no styling
-				</p>
-			</div>
-		</header>
-		<main>
-			<section class="projects">
-				<h2 class="projects-title">Projects</h2>
-				<ul class="projects-list">
-					<li class="project-item">
-						<a href="">HTML Only Portfolio</a>
-					</li>
-					<li class="project-item"><a href="#"> Calculator </a></li>
-					<li class="project-item"><a href="#"> Quiz App </a></li>
-					<li class="project-item">
-						<a href="#"> Countdown Timer </a>
-					</li>
-					<li class="project-item">
-						<a href="#"> Product Upcomming Page </a>
-					</li>
-				</ul>
-			</section>
-			<section class="work-experience">
-				<div class="work-experience-main">
-					<h2 class="wem-title">Work Experience</h2>
-					<a href="https://roadmap.sh" class="wem-reference">
-						roadmap.sh
-					</a>
-					<p class="wem-explanation">
-						Solved all the frontend projects
+				<div class="nav-right">
+					<ul class="topic-list">
+						<li class="topic-item link-container">
+							<a href="./home.html" class="topic-link">Home</a>
+							<div class="link-underline"></div>
+						</li>
+						<li class="topic-item link-container">
+							<a href="./projects.html" class="topic-link"
+								>Projects</a
+							>
+							<div class="link-underline"></div>
+						</li>
+						<li class="topic-item link-container">
+							<a href="./articles.html" class="topic-link"
+								>Articles</a
+							>
+							<div class="link-underline"></div>
+						</li>
+						<li class="topic-item link-container">
+							<a href="./contact.html" class="topic-link"
+								>Contact</a
+							>
+							<div class="link-underline"></div>
+						</li>
+					</ul>
+				</div>
+			</nav>
+			<header>
+				<div class="title">
+					<h1 class="title-main">Frontend Developer</h1>
+					<p class="title-more">
+						html only with proper layaout, no styling
 					</p>
-					<a href="#" class="wem-link"> Visit my Profile </a>
 				</div>
-				<div class="work-experience-opensource">
-					<h3 class="weo-title">OpenSource Work</h3>
-					<p class="weo-explanation">
-						Contributed to 50 opensource projects . Made my own
-						projects with 200 GitHub Stars.
+			</header>
+			<main>
+				<section class="projects">
+					<h2 class="main-title">Projects</h2>
+					<ul class="projects-list">
+						<li class="project-item link-container">
+							<a href="">HTML Only Portfolio</a>
+							<div class="link-underline"></div>
+						</li>
+						<li class="project-item link-container">
+							<a href="#"> Calculator </a>
+							<div class="link-underline"></div>
+						</li>
+						<li class="project-item link-container">
+							<a href="#"> Quiz App </a>
+							<div class="link-underline"></div>
+						</li>
+						<li class="project-item link-container">
+							<a href="#"> Countdown Timer </a>
+							<div class="link-underline"></div>
+						</li>
+						<li class="project-item link-container">
+							<a href="#"> Product Upcomming Page </a>
+							<div class="link-underline"></div>
+						</li>
+					</ul>
+				</section>
+				<section class="work-experience">
+					<div class="work-experience-main">
+						<h2 class="main-title">Work Experience</h2>
+						<div class="link-container">
+							<a href="https://roadmap.sh" class="wem-reference">
+								roadmap.sh
+							</a>
+							<div class="link-underline"></div>
+						</div>
+
+						<p class="wem-explanation">
+							Solved all the frontend projects
+						</p>
+						<div class="link-container">
+							<a href="#" class="wem-link"> Visit my Profile </a>
+							<div class="link-underline"></div>
+						</div>
+					</div>
+					<div class="work-experience-opensource">
+						<h3 class="weo-title">OpenSource Work</h3>
+						<p class="weo-explanation">
+							Contributed to 50 opensource projects . Made my own
+							projects with 200 GitHub Stars.
+						</p>
+
+						<div class="link-container">
+							<a
+								href="https://github.com/DevMasen"
+								class="weo-link"
+							>
+								Visit my GitHub Profile
+							</a>
+							<div class="link-underline"></div>
+						</div>
+					</div>
+				</section>
+				<article class="education">
+					<h2 class="main-title">Education</h2>
+					<p class="education-explanation">
+						Graduated with 3.76 out of 4 CGPA. Won Acme Hackathon.
+						Organized 30 sessions.
 					</p>
-					<a href="https://github.com/DevMasen" class="weo-link">
-						Visit my GitHub Profile
-					</a>
+					<h4 class="course-list-title">Courses I took :</h4>
+					<ul class="course-list">
+						<li class="course-item">Object Oriented Programming</li>
+						<li class="course-item">
+							Data Structures and Algorithms
+						</li>
+						<li class="course-item">Web Engineering</li>
+						<li class="course-item">Artificial Intelligence</li>
+						<li class="course-item">Human Computer Interaction</li>
+						<li class="course-item">Computer graphics</li>
+						<li class="course-item">Database Management Systems</li>
+						<li class="course-item">
+							Distributed Database Systems
+						</li>
+						<li class="course-item">Discreet Mathematics</li>
+					</ul>
+				</article>
+			</main>
+			<footer>
+				<section class="review">
+					<h2 class="review-title">Reviews from my Teachers</h2>
+
+					<div class="comments">
+						<div class="comment" id="comment-1">
+							<div class="comment-text">
+								<p>
+									John doe was a brilliant student; always
+									stood out with his assignments.
+								</p>
+							</div>
+							<div class="person">
+								<div class="name">Jane Doe</div>
+								<div class="capacity">Assistant Professor</div>
+							</div>
+						</div>
+						<div class="comment" id="comment-2">
+							<div class="comment-text">
+								<p>
+									John doe was a brilliant student; always
+									stood out with his assignments.
+								</p>
+							</div>
+							<div class="person">
+								<div class="name">Jane Doe</div>
+								<div class="capacity">Assistant Professor</div>
+							</div>
+						</div>
+						<div class="comment" id="comment-3">
+							<div class="comment-text">
+								<p>
+									John doe was a brilliant student; always
+									stood out with his assignments.
+								</p>
+							</div>
+							<div class="person">
+								<div class="name">Jane Doe</div>
+								<div class="capacity">Assistant Professor</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<div class="copyright">
+					<p>&copy; all rights reserved 2025</p>
 				</div>
-			</section>
-			<article class="education">
-				<h2 class="education-title">Education</h2>
-				<p class="education-explanation">
-					Graduated with 3.76 out of 4 CGPA. Won Acme Hackathon.
-					Organized 30 sessions.
-				</p>
-				<h4 class="course-list-title">Courses I took:</h4>
-				<ul class="course-list">
-					<li class="course-item">Object Oriented Programming</li>
-					<li class="course-item">Data Structures and Algorithms</li>
-					<li class="course-item">Web Engineering</li>
-					<li class="course-item">Artificial Intelligence</li>
-					<li class="course-item">Human Computer Interaction</li>
-					<li class="course-item">Computer graphics</li>
-					<li class="course-item">Database Management Systems</li>
-					<li class="course-item">Distributed Database Systems</li>
-					<li class="course-item">Discreet Mathematics</li>
-				</ul>
-			</article>
-		</main>
-		<footer>
-			<div class="review">
-				<h2 class="review-title">Reviews from my Teachers</h2>
-				<div class="comment" id="comment-1">
-					<div class="comment-text">
-						<p>
-							John doe was a brilliant student; always stood out
-							with his assignments.
-						</p>
-					</div>
-					<div class="person">
-						<div class="name">Jane Doe</div>
-						<div class="capacity">Assistant Professor</div>
-					</div>
-				</div>
-				<div class="comment" id="comment-2">
-					<div class="comment-text">
-						<p>
-							John doe was a brilliant student; always stood out
-							with his assignments.
-						</p>
-					</div>
-					<div class="person">
-						<div class="name">Jane Doe</div>
-						<div class="capacity">Assistant Professor</div>
-					</div>
-				</div>
-				<div class="comment" id="comment-3">
-					<div class="comment-text">
-						<p>
-							John doe was a brilliant student; always stood out
-							with his assignments.
-						</p>
-					</div>
-					<div class="person">
-						<div class="name">Jane Doe</div>
-						<div class="capacity">Assistant Professor</div>
-					</div>
-				</div>
-			</div>
-			<div class="copyright">
-				<p>&copy; all rights reserved 2025</p>
-			</div>
-		</footer>
+			</footer>
+		</div>
 	</body>
 </html>
