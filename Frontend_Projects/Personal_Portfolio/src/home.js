@@ -1,7 +1,8 @@
 const darkModeImogi = document.querySelector('.label-text');
 const darkModeInput = document.getElementById('darkToggle');
 
-darkModeInput.addEventListener('change', e => {
-	darkModeImogi.textContent =
-		darkModeImogi.textContent === '☀️' ? '🌛' : '☀️';
+darkModeImogi.textContent = darkModeInput.checked ? '🌛' : '☀️';
+
+darkModeInput.addEventListener('change', () => {
+	darkModeImogi.textContent = darkModeInput.checked ? '🌛' : '☀️';
 });
