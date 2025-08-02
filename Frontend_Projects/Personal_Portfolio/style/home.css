@@ -16,7 +16,11 @@ a {
 	color: var(--blue);
 }
 .container {
-	padding: 0 2rem 0 2rem;
+	max-width: 1320px;
+	padding-left: 1rem;
+	padding-right: 1rem;
+	margin-left: auto;
+	margin-right: auto;
 }
 nav {
 	display: flex;
@@ -67,6 +71,7 @@ header {
 	flex-direction: column;
 }
 .title-main {
+	text-align: center;
 	font-size: 64px;
 	color: var(--gray);
 }

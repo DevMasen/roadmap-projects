@@ -1,18 +1,85 @@
 /*! Responsive Layout Codes */
-@media screen and (width <= 576px) {
-	body {
-		background-color: blueviolet;
+
+/* Extra Large (xl) - ≤1399px */
+@media (max-width: 1399.98px) {
+	.container {
+		max-width: 1140px;
 	}
 }
-@media screen and (width >= 577px) and (width <= 768px) {
-	body {
-		background-color: brown;
+
+/* Large (lg) - ≤1199px */
+@media (max-width: 1199.98px) {
+	.container {
+		max-width: 960px;
 	}
 }
-@media screen and (width >= 769px) and (width <= 992px) {
-	body {
-		background-color: cadetblue;
+
+/* Medium (md) - ≤991px */
+@media (max-width: 991.98px) {
+	.container {
+		max-width: 720px;
+	}
+	main {
+		grid-template-columns: 1fr;
+		gap: 2rem;
+	}
+	.projects-list {
+		padding: 0;
+		align-items: center;
+	}
+	.comments {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+	.comment {
+		width: 12rem;
 	}
 }
-@media screen and (width >= 993px) {
+
+/* Small (sm) - ≤767px */
+@media (max-width: 767.98px) {
+	.container {
+		max-width: 540px;
+	}
+	nav {
+		margin-top: 2rem;
+		display: flex;
+		flex-direction: column;
+	}
+	.nav-left {
+		flex-direction: column;
+	}
+	.title-main {
+		font-size: 48px;
+	}
+	.title-more {
+		font-size: 16px;
+	}
+}
+
+/* Extra Small (xs) - ≤575px */
+@media (max-width: 575.98px) {
+	.container {
+		width: 100%;
+	}
+	header {
+		margin-top: 0;
+	}
+	.title-main {
+		font-size: 36px;
+	}
+	main {
+		font-family: 'montserrat-regular';
+	}
+	.review-title {
+		font-size: 28px;
+	}
+	#comment-1 {
+		width: 100%;
+	}
+	#comment-2,
+	#comment-3 {
+		display: none;
+	}
 }
