@@ -50,45 +50,46 @@
 	<body>
 		<h1 class="contact_title">Contact</h1>
 		<div class="contact_container">
-			<fieldset class="contact_fieldset">
-				<legend class="contact_legend">Contact us</legend>
-				<form class="contact_form" action="">
-					<label class="contact_form_label" for="name">Name</label>
+			<form class="contact_form" action="">
+				<div class="field">
+					<label for="name">Name</label>
 					<input
 						class="contact_form_input"
 						type="text"
 						name="name"
 						id="name"
+						maxlength="40"
+						required
 					/>
-					<br />
-					<br />
-					<label class="contact_form_label" for="email">Email</label>
+				</div>
+
+				<div class="field">
+					<label for="email">Email</label>
 					<input
 						class="contact_form_input"
 						type="email"
 						name="email"
 						id="email"
+						required
 					/>
-					<br />
-					<br />
-					<label class="contact_form_label" for="message"
-						>Message</label
-					>
-					<input
-						class="contact_form_input"
-						type="text"
+				</div>
+
+				<div class="field">
+					<label for="message">Message</label>
+					<textarea
 						name="message"
 						id="message"
-					/>
-					<br />
-					<br />
-					<input
-						class="contact_submit-btn"
-						type="submit"
-						value="submit"
-					/>
-				</form>
-			</fieldset>
+						placeholder="Type your message..."
+						maxlength="200"
+						required
+					></textarea>
+				</div>
+				<input
+					class="contact_submit-btn"
+					type="submit"
+					value="submit"
+				/>
+			</form>
 		</div>
 	</body>
 </html>
