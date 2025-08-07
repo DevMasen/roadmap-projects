@@ -1,6 +1,9 @@
-<h1> roadmap-projects </h1>
+<h1 align="center"> Roadmap Frontend Projects 💻</h1>
+<p align="center">
+<img align="center" width="720px" src="./banner.png" alt="Banner Image">
+</p>
 
-<h2>This is a repository for roadmap.sh projects</h2>
+## This is a repository for [roadmap.sh](https://roadmap.sh/) frontend projects
 
 <h2> Projects: </h2>
 
