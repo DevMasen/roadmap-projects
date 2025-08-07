@@ -18,7 +18,6 @@ body {
 	background-color: var(--color-01);
 	color: var(--color-07);
 }
-
 .contact_title {
 	text-align: center;
 	font-family: montserrat-medium;
@@ -29,6 +28,7 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	margin-bottom: 30rem;
 }
 .contact_form {
 	font-size: 20px;
@@ -44,11 +44,10 @@ body {
 	gap: 0.5rem;
 }
 .field textarea {
-	height: 8rem;
-	min-width: 20rem;
+	min-width: 15rem;
 	max-width: 20rem;
 	min-height: 3rem;
-	max-height: 20rem;
+	max-height: 30rem;
 	outline: none;
 	background-color: var(--color-03);
 	color: var(--color-00);
@@ -57,7 +56,6 @@ body {
 }
 .contact_form_input {
 	all: unset;
-	width: 20rem;
 	background-color: var(--color-03);
 	color: var(--color-00);
 	padding: 0.5rem;

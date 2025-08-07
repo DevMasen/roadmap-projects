@@ -35,6 +35,12 @@
 	.comment {
 		width: 12rem;
 	}
+	.article-list {
+		width: 100%;
+	}
+	.article-item {
+		width: 100%;
+	}
 }
 
 /* Small (sm) - ≤767px */
@@ -81,5 +87,25 @@
 	#comment-2,
 	#comment-3 {
 		display: none;
+	}
+	.article-item {
+		padding: 1rem;
+	}
+	.article-link {
+		padding: 0.5rem;
+		font-size: 12px;
+	}
+	.contact_form {
+		width: 100%;
+	}
+	.field {
+		width: 100%;
+	}
+	.contact_form_input {
+		width: 100%;
+	}
+	.field textarea {
+		min-width: 5rem;
+		width: 100%;
 	}
 }
