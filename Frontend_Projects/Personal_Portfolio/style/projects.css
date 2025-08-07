@@ -21,6 +21,18 @@ a {
 	text-decoration: none;
 	color: var(--color-05);
 }
+.project-home-button {
+	width: 2rem;
+	height: 2rem;
+	position: absolute;
+	top: 1rem;
+	left: 1rem;
+}
+.project-home-button a,
+.project-home-button img {
+	width: 100%;
+	height: 100%;
+}
 .project-container {
 	max-width: 1320px;
 	padding-left: 1rem;

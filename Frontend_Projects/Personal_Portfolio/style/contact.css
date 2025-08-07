@@ -18,6 +18,18 @@ body {
 	background-color: var(--color-01);
 	color: var(--color-07);
 }
+.contact-home-button {
+	width: 2rem;
+	height: 2rem;
+	position: absolute;
+	top: 1rem;
+	left: 1rem;
+}
+.contact-home-button a,
+.contact-home-button img {
+	width: 100%;
+	height: 100%;
+}
 .contact_title {
 	text-align: center;
 	font-family: montserrat-medium;

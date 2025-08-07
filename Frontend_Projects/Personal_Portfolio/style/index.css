@@ -180,15 +180,9 @@ main {
 	flex-direction: column;
 	gap: 2rem;
 }
-.wem-explanation {
-	color: var(--color-00);
-}
-.work-experience-opensource {
-	color: var(--color-00);
-}
-.education-explanation {
-	color: var(--color-00);
-}
+.wem-explanation,
+.work-experience-opensource,
+.education-explanation,
 .course-list-title {
 	color: var(--color-00);
 }
