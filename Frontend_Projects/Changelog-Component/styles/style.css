@@ -1,41 +1,95 @@
-/* :root {
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap');
+:root {
+	--color-01: #e03433;
+	--color-02: #f6dfab;
+	--color-03: #262626;
+	--color-04: #ffffff;
+	--color-05: #000000;
+	--color-06: #ffc234;
 }
-
-header {
+body {
+	font-family: 'Exo 2';
+	text-align: center;
+	background-color: var(--color-03);
+	color: var(--color-04);
+	padding: 0;
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
+/* header {} */
 .title {
+	font-size: 48px;
 }
 .text {
+	color: var(--color-02);
 }
-main {
-}
+
 .changelog-container {
+	width: 70rem;
+	margin-top: 3rem;
+	padding-right: 10rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 .line {
+	background-color: var(--color-01);
+	width: 2px;
+	height: 3rem;
 }
 .event {
+	height: 1.5rem;
+	display: flex;
+	gap: 1.5rem;
+	justify-content: center;
+	align-items: center;
 }
-#event-1 {
-}
-#event-2 {
-}
-#event-3 {
-}
-#event-4 {
-}
-#event-5 {
-}
-#event-6 {
-}
-#event-7 {
-}
+/* #event-1 {} */
+/* #event-2 {} */
+/* #event-3 {} */
+/* #event-4 {} */
+/* #event-5 {} */
+/* #event-6 {} */
+/* #event-7 {} */
 .date {
+	color: var(--color-02);
+	font-size: 14px;
+	width: 15rem;
+	text-align: end;
 }
 .circle {
+	width: 1.5rem;
+	height: 1.5rem;
+	background-color: var(--color-01);
+	border-radius: 50%;
 }
 .message {
+	font-size: 18px;
+	white-space: nowrap;
+	width: 15rem;
+	text-align: start;
 }
 footer {
+	margin-top: 3rem;
+	margin-bottom: 10rem;
 }
 #changelog-btn {
-} */
+	all: unset;
+	font-family: 'Exo 2';
+	padding: 0.7rem 1rem;
+	font-size: 16px;
+	font-weight: 700;
+	background-color: var(--color-02);
+	color: var(--color-05);
+	border-radius: 0.5rem;
+	cursor: pointer;
+	transition: all 100ms ease-out;
+}
+#changelog-btn:hover {
+	background-color: var(--color-06);
+}
+#changelog-btn:active {
+	transform: scale(0.95);
+}
