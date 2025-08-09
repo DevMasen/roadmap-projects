@@ -18,7 +18,6 @@ body {
 	flex-direction: column;
 	align-items: center;
 }
-/* header {} */
 .title {
 	font-size: 48px;
 }
@@ -46,13 +45,6 @@ body {
 	justify-content: center;
 	align-items: center;
 }
-/* #event-1 {} */
-/* #event-2 {} */
-/* #event-3 {} */
-/* #event-4 {} */
-/* #event-5 {} */
-/* #event-6 {} */
-/* #event-7 {} */
 .date {
 	color: var(--color-02);
 	font-size: 14px;
