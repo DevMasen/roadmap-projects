@@ -19,7 +19,7 @@
 
 ## Projects :
 
-<div style="display:flex;justify-content:center;align-items:flex-start;flex-wrap:wrap;gap:1rem;">
+<!-- <div style="display:flex;justify-content:center;align-items:flex-start;flex-wrap:wrap;gap:1rem;">
 
 <a href="./Frontend_Projects/Single-Page-CV/" style="width:400px;height:250px;display:flex;flex-direction:column;background-color:#232323;text-decoration:none;color:#fff;padding:1.5rem;border-radius:1rem;">
 <img src="./Frontend_Projects/Single-Page-CV/img/banner.png" alt="BANNER" width="100%" height="200px"  style="border-radius:5px;object-fit:cover;">
@@ -41,4 +41,4 @@
 <h2>Changelog Component</h2>
 </a>
 
-</div>
+</div> -->
