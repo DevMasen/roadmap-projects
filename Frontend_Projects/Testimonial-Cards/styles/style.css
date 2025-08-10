@@ -1,0 +1,58 @@
+/*! Testimonials Style  */
+:root {
+	--color-00: #000000;
+	--color-01: #ffffff;
+	--color-02: #c99b17;
+	--color-03: #78b6c5;
+	--color-04: #0d0d0d;
+}
+* {
+	box-sizing: border-box;
+}
+body {
+	padding: 0;
+	margin: 0;
+	font-family: Fredoka;
+}
+img {
+	width: 70px;
+}
+
+.container {
+	max-width: 1320px;
+	padding-left: 1rem;
+	padding-right: 1rem;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 30rem;
+}
+/* .testimonial-1{} */
+/* .test1-message{} */
+/* .test1-arrow{} */
+/* .test1-avatar{} */
+/* .test1-avatar-img{} */
+/* .test1-avatar-text{} */
+/* .test1-avatar-name{} */
+/* .test1-avatar-job{} */
+/* .testimonial-2{} */
+/* .test2-message{} */
+/* .test2-avatar{} */
+/* .test2-avatar-img{} */
+/* .test2-avatar-text{} */
+/* .test2-avatar-name{} */
+/* .test2-avatar-job{} */
+/* .testimonial-3{} */
+/* .test3-avatar-img{} */
+/* .test3-text-box{} */
+/* .test3-stars{} */
+/* .test3-avatar-text{} */
+/* .test3-avatar-name{} */
+/* .test3-avatar-job{} */
+/* .test3-message{} */
+/* .testimonial-slider{} */
+/* .test-slider-message{} */
+/* .test-slider{} */
+/* .test-slider-btn{} */
+/* .test-slider-images{} */
+/* .slider-img{} */
+/* .test-slider-name{} */
