@@ -19,6 +19,35 @@
 
 ## Projects :
 
+<div style="display:flex; gap:16px; flex-wrap:wrap; align-items:flex-start;">
+  <!-- card 1 -->
+  <figure style="margin:0; width:320px; border-radius:8px; overflow:hidden; box-shadow:0 6px 18px rgba(0,0,0,0.08);">
+    <img src="https://picsum.photos/640/360?random=1" alt="Card image 1" style="width:100%; height:180px; object-fit:cover; display:block;" />
+    <figcaption style="padding:12px 14px;">
+      <h3 style="margin:0; font-size:1.05rem">Card Title One</h3>
+      <p style="margin:6px 0 0; color:#555; font-size:0.9rem">Short caption or description for card one.</p>
+    </figcaption>
+  </figure>
+
+  <!-- card 2 -->
+  <figure style="margin:0; width:320px; border-radius:8px; overflow:hidden; box-shadow:0 6px 18px rgba(0,0,0,0.08);">
+    <img src="https://picsum.photos/640/360?random=2" alt="Card image 2" style="width:100%; height:180px; object-fit:cover; display:block;" />
+    <figcaption style="padding:12px 14px;">
+      <h3 style="margin:0; font-size:1.05rem">Card Title Two</h3>
+      <p style="margin:6px 0 0; color:#555; font-size:0.9rem">Short caption or description for card two.</p>
+    </figcaption>
+  </figure>
+
+  <!-- card 3 -->
+  <figure style="margin:0; width:320px; border-radius:8px; overflow:hidden; box-shadow:0 6px 18px rgba(0,0,0,0.08);">
+    <img src="https://picsum.photos/640/360?random=3" alt="Card image 3" style="width:100%; height:180px; object-fit:cover; display:block;" />
+    <figcaption style="padding:12px 14px;">
+      <h3 style="margin:0; font-size:1.05rem">Card Title Three</h3>
+      <p style="margin:6px 0 0; color:#555; font-size:0.9rem">Short caption or description for card three.</p>
+    </figcaption>
+  </figure>
+
+</div>
 <!-- <div style="display:flex;justify-content:center;align-items:flex-start;flex-wrap:wrap;gap:1rem;">
 
 <a href="./Frontend_Projects/Single-Page-CV/" style="width:400px;height:250px;display:flex;flex-direction:column;background-color:#232323;text-decoration:none;color:#fff;padding:1.5rem;border-radius:1rem;">
