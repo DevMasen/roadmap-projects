@@ -23,37 +23,37 @@
   <tr>
     <td align="center" valign="top">
       <a href="./Frontend_Projects/Single-Page-CV/">
-        <img src="./Frontend_Projects/Single-Page-CV/img/banner.png" alt="Card 1" width="680" />
+        <img src="./Frontend_Projects/Single-Page-CV/img/banner-2.png" alt="Card 1" width="550px" />
       </a>
         <h2>Single-Page CV</h2>
       <p>A single-page HTML CV to showcase my career history</p>
     </td>
   </tr>
-  <tr><td height="50"></td></tr>
+  <tr><td height="100px"></td></tr>
   <tr>
     <td align="center" valign="top">
       <a href="./Frontend_Projects/Basic-HTML-Website/">
-        <img src="./Frontend_Projects/Basic-HTML-Website/img/banner.png" alt="Card 2" width="680" />
+        <img src="./Frontend_Projects/Basic-HTML-Website/img/banner-2.png" alt="Card 2" width="550px" />
       </a>
         <h2>Basic HTML Website</h2>
       <p>Simple HTML only website with multiple pages</p>
     </td>
   </tr>
-  <tr><td height="50"></td></tr>
+  <tr><td height="100px"></td></tr>
   <tr>
     <td align="center" valign="top">
       <a href="./Frontend_Projects/Personal_Portfolio/">
-        <img src="./Frontend_Projects/Personal_Portfolio/img/readme-banner.png" alt="Card 3" width="680" />
+        <img src="./Frontend_Projects/Personal_Portfolio/img/readme-banner-2.png" alt="Card 3" width="550px" />
       </a>
         <h2>Personal Portfolio</h2>
       <p>Converting the previous simple HTML website into a personal portfolio.</p>
     </td>
   </tr>
-  <tr><td height="50"></td></tr>
+  <tr><td height="100px"></td></tr>
   <tr>
     <td align="center" valign="top">
       <a href="./Frontend_Projects/Changelog-Component/">
-        <img src="./Frontend_Projects/Changelog-Component/images/banner.png" alt="Card 3" width="680" />
+        <img src="./Frontend_Projects/Changelog-Component/img/banner-2.png" alt="Card 3" width="550px" />
       </a>
         <h2>Changelog Component</h2>
       <p>Changelog component for a website using HTML and CSS</p>

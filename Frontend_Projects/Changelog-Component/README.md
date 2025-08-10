@@ -1,6 +1,6 @@
 <h1 align="center">Changelog Component 📝<h1>
 <p align="center">
-<img align="center" width="420px" src="./banner.png" alt="Banner Image">
+<img align="center" width="420px" src="./img/banner.png" alt="Banner Image">
 </p>
 
 ### A Simple Changelog Component to show a process steps
