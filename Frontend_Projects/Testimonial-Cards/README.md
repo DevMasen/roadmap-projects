@@ -1,6 +1,6 @@
 <h1 align="center">Testimonial Cards 📝<h1>
 <p align="center">
-<img align="center" src="./img/banner.png" width="420px" src="" alt="Banner Image">
+<img align="center" src="./img/banner.png" width="420px" alt="Banner Image">
 </p>
 
 ### Well styled Testimonial Cards to show the credibility and trust.
