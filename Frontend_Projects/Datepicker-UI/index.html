@@ -6,6 +6,96 @@
 		<!-- Stylesheet -->
 		<link rel="stylesheet" href="./styles/style.css" />
 		<link rel="stylesheet" href="./styles/normalize.css" />
+		<style>
+			@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
+		</style>
 	</head>
-	<body></body>
+	<body>
+		<div class="container">
+			<div class="date-input-container">
+				<input
+					class="date-input"
+					type="text"
+					placeholder="dd / mm / yyyy"
+				/>
+				<button class="date-btn">📅</button>
+			</div>
+			<div class="date-picker">
+				<div class="date-slider">
+					<button class="previous-month">
+						<img src="./img/icons8-back-48.png" alt="prev" />
+					</button>
+					<div class="month-year">
+						<span class="month">December</span>
+						<span class="year">2022</span>
+					</div>
+					<button class="next-month">
+						<img src="./img/icons8-forward-48.png" alt="next" />
+					</button>
+				</div>
+				<div>
+					<table>
+						<thead>
+							<tr>
+								<th>S</th>
+								<th>M</th>
+								<th>T</th>
+								<th>W</th>
+								<th>T</th>
+								<th>F</th>
+								<th>S</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td>1</td>
+								<td>2</td>
+								<td>3</td>
+							</tr>
+							<tr>
+								<td>4</td>
+								<td>5</td>
+								<td>6</td>
+								<td>7</td>
+								<td>8</td>
+								<td>9</td>
+								<td>10</td>
+							</tr>
+							<tr>
+								<td>11</td>
+								<td>12</td>
+								<td>13</td>
+								<td>14</td>
+								<td>15</td>
+								<td>16</td>
+								<td>17</td>
+							</tr>
+							<tr>
+								<td>18</td>
+								<td>19</td>
+								<td>20</td>
+								<td>21</td>
+								<td>22</td>
+								<td>23</td>
+								<td>24</td>
+							</tr>
+							<tr>
+								<td>25</td>
+								<td>26</td>
+								<td>27</td>
+								<td>28</td>
+								<td>29</td>
+								<td>30</td>
+								<td>31</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</body>
 </html>
