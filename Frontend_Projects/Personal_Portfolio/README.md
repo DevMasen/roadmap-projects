@@ -3,9 +3,7 @@
 <img align="center" width="720px"  src="./img/readme-banner.png" alt="Banner Image">
 </p>
 
-### A multipage HTML and CSS website to show my portfolio
-
-### Fully styled pages
+## A multipage HTML and CSS website to show my portfolio
 
 ### A Frontend Project by [roadmap.sh](https://roadmap.sh/frontend/projects)
 

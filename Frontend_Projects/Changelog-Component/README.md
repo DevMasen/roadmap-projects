@@ -3,7 +3,7 @@
 <img align="center" width="420px" src="./img/banner.png" alt="Banner Image">
 </p>
 
-### A Simple Changelog Component to show a process steps
+## A Simple Changelog Component to show a process steps
 
 ### Fully styled page with proper responsive layout
 

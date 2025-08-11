@@ -3,9 +3,7 @@
 <img align="center" width="720px" src="./img/banner.png" alt="Banner Image">
 </p>
 
-### A single-page HTML CV to showcase my career history
-
-### No CSS used in this project (except some inline styles for color)
+### A single-page HTML only webpage to showcase my career history
 
 ### A Frontend Project by [roadmap.sh](https://roadmap.sh/frontend/projects)
 

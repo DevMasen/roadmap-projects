@@ -3,7 +3,7 @@
 <img align="center" width="320px" src="./img/banner.png" alt="Banner Image">
 </p>
 
-### A multipage HTML only website showcase my HTML skills
+## A multipage HTML only website showcase my HTML skills
 
 ### No CSS used in this project!
 

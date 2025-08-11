@@ -3,7 +3,7 @@
 <img align="center" src="./img/banner.png" width="420px" alt="Banner Image">
 </p>
 
-### Well styled Testimonial Cards to show the credibility and trust.
+## Well styled Testimonial Cards to show the credibility and trust.
 
 ### A Frontend Project by [roadmap.sh](https://roadmap.sh/frontend/projects)
 
