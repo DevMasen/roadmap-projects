@@ -2,8 +2,6 @@
 :root {
 	--color-00: #000000;
 	--color-01: #ffffff;
-	--color-02: #c99b17;
-	--color-03: #78b6c5;
 	--color-04: #0d0d0d;
 	--color-05: #777777;
 	--color-06: #edddd6;
@@ -40,7 +38,6 @@ p {
 	grid-area: t1;
 	justify-self: end;
 }
-/* .test1-message-container {} */
 .test1-message {
 	max-height: 20rem;
 	line-height: 22px;
@@ -68,7 +65,6 @@ p {
 .test1-avatar-img {
 	width: 65px;
 }
-/* .test1-avatar-text{} */
 .test1-avatar-name,
 .test2-avatar-name {
 	font-size: 18px;
@@ -103,12 +99,12 @@ p {
 .test2-avatar-img {
 	width: 65px;
 }
-/* .test2-avatar-text{} */
 .testimonial-3 {
 	max-width: 40rem;
 	background-color: var(--color-01);
 	grid-area: t3;
 	display: flex;
+	justify-self: center;
 	gap: 0.7rem;
 }
 .test3-avatar-img {
@@ -124,8 +120,6 @@ p {
 	padding: 1.5rem;
 	border-radius: 1rem;
 }
-/* .test3-stars {} */
-/* .test3-avatar-text{} */
 .test3-avatar-name {
 	font-size: 20px;
 	font-weight: 400;
@@ -152,7 +146,6 @@ p {
 	display: grid;
 	justify-self: center;
 }
-/* .test-slider-message {} */
 .test-slider {
 	margin-top: 2rem;
 	justify-self: center;
