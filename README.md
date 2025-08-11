@@ -14,6 +14,7 @@
 -   Project 3 : [Personal Portfolio](https://roadmap.sh/projects/portfolio-website)
 
 -   Project 4 : [Changelog Component](https://roadmap.sh/projects/changelog-component)
+-   Project 5 : [Testimonial Cards](https://roadmap.sh/projects/testimonial-cards)
 
 ---
 
@@ -53,10 +54,20 @@
   <tr>
     <td align="center" valign="top">
       <a href="./Frontend_Projects/Changelog-Component/">
-        <img src="./Frontend_Projects/Changelog-Component/img/banner-2.png" alt="Card 3" width="550px" />
+        <img src="./Frontend_Projects/Changelog-Component/img/banner-2.png" alt="Card 4" width="550px" />
         <h2>Changelog Component</h2>
       </a>
       <p>Changelog component for a website using HTML and CSS</p>
+    </td>
+  </tr>
+  <tr><td height="100px"></td></tr>
+  <tr>
+    <td align="center" valign="top">
+      <a href="./Frontend_Projects/Testimonial-Cards/">
+        <img src="./Frontend_Projects/Testimonial-Cards/img/banner-2.png" alt="Card 5" width="550px" />
+        <h2>Testimonial Cards</h2>
+      </a>
+      <p>Create testimonial cards for a website using HTML and CSS</p>
     </td>
   </tr>
 </table>
