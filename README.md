@@ -15,6 +15,7 @@
 
 -   Project 4 : [Changelog Component](https://roadmap.sh/projects/changelog-component)
 -   Project 5 : [Testimonial Cards](https://roadmap.sh/projects/testimonial-cards)
+-   Project 6 : [Datepicker UI](https://roadmap.sh/projects/datepicker-ui)
 
 ---
 
@@ -67,7 +68,17 @@
         <img src="./Frontend_Projects/Testimonial-Cards/img/banner-2.png" alt="Card 5" width="550px" />
         <h2>Testimonial Cards</h2>
       </a>
-      <p>Create testimonial cards for a website using HTML and CSS</p>
+      <p>Testimonial cards for a website using HTML and CSS</p>
+    </td>
+  </tr>
+  <tr><td height="100px"></td></tr>
+  <tr>
+    <td align="center" valign="top">
+      <a href="./Frontend_Projects/Datepicker-UI/">
+        <img src="./Frontend_Projects/Datepicker-UI/img/banner-2.png" alt="Card 6" width="550px" />
+        <h2>Datepicker UI</h2>
+      </a>
+      <p>A simple datepicker UI using HTML and CSS</p>
     </td>
   </tr>
 </table>
