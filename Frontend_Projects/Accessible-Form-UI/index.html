@@ -6,10 +6,123 @@
 		<!-- Stylesheet -->
 		<link rel="stylesheet" href="./styles/style.css" />
 		<link rel="stylesheet" href="./styles/responsive.css" />
+		<style>
+			@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+		</style>
 	</head>
 	<body>
 		<div class="container">
-			<form action="#" class="signup-form"></form>
+			<form action="#" class="signup-form">
+				<ul class="fields">
+					<li class="form-field">
+						<label for="name">Full Name</label>
+						<input
+							type="text"
+							id="name"
+							name="name"
+							required
+							aria-required="true"
+							aria-invalid="true"
+						/>
+					</li>
+
+					<li class="form-field">
+						<label for="email">Email</label>
+						<input
+							type="email"
+							name="email"
+							id="email"
+							required
+							aria-required="true"
+							aria-describedby="email-error"
+							aria-invalid="true"
+						/>
+						<span class="error hidden" id="email-error"
+							>Email is already taken!</span
+						>
+					</li>
+
+					<li class="form-field">
+						<label for="password">Enter Password</label>
+						<div class="password-container">
+							<input
+								type="password"
+								name="password"
+								id="password"
+								required
+								aria-required="true"
+								aria-describedby="password-error"
+								aria-invalid="true"
+							/>
+							<button
+								class="show-hide-btn"
+								id="password-toggle"
+								type="button"
+								aria-pressed="false"
+								aria-label="Password is hidden"
+							>
+								👁️
+							</button>
+						</div>
+						<span class="error hidden" id="password-error"
+							>Password is invalid!</span
+						>
+					</li>
+
+					<li class="form-field">
+						<label for="confirm-password">Confirm Password</label>
+						<div class="password-container">
+							<input
+								type="password"
+								name="confirm"
+								id="confirm-password"
+								required
+								aria-required="true"
+								aria-describedby="confirm-error"
+								aria-invalid="true"
+							/>
+							<button
+								class="show-hide-btn"
+								id="confirm-password-toggle"
+								type="button"
+								aria-pressed="false"
+								aria-label="Confirm Password is hidden"
+							>
+								👁️
+							</button>
+						</div>
+						<span class="error hidden" id="confirm-error"
+							>This password does not match to first one!</span
+						>
+					</li>
+				</ul>
+
+				<button type="submit" id="submit-btn" aria-pressed="false">
+					Update Profile
+				</button>
+			</form>
+
+			<aside class="progress">
+				<section class="progress-bar">
+					<div class="main-circle">
+						<div class="progress-circle">
+							<span class="progress-percent">65%</span>
+						</div>
+					</div>
+					<h3 class="progress-title">Profile Completeness</h3>
+				</section>
+				<section class="progress-list-container">
+					<ul class="progress-list">
+						<li class="progress-item">Create Account</li>
+						<li class="progress-item">Update Roadmap Progress</li>
+						<li class="progress-item">Setup Public Profile</li>
+						<li class="progress-item">
+							Complete your first project
+						</li>
+						<li class="progress-item">Invite your Friends</li>
+					</ul>
+				</section>
+			</aside>
 		</div>
 	</body>
 </html>

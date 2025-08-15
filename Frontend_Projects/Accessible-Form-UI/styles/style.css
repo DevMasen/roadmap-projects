@@ -5,7 +5,7 @@
 	margin: 0;
 }
 body {
-	font-family: 'Courier New', Courier, monospace;
+	font-family: 'Inter';
 }
 .container {
 	max-width: 1320px;
@@ -16,3 +16,35 @@ body {
 	margin-top: 1rem;
 	margin-bottom: 20rem;
 }
+.error {
+	color: #b00020;
+	background-color: #fff0f0;
+}
+.hidden {
+	display: none;
+}
+
+/* .signup-form {} */
+/* .fields {} */
+/* .form-field {} */
+/* .password-container {} */
+/* .show-hide-btn {} */
+/* .progress {} */
+/* .progress-bar {} */
+/* .main-circle {} */
+/* .progress-circle {} */
+/* .progress-percent {} */
+/* .progress-title {} */
+/* .progress-list-container {} */
+/* .progress-list {} */
+/* .progress-item {} */
+
+/* #name {} */
+/* #email {} */
+/* #password {} */
+/* #password-toggle {} */
+/* #password-error {} */
+/* #confirm-password {} */
+/* #confirm-password-toggle {} */
+/* #confirm-error {} */
+/* #submit-btn {} */
