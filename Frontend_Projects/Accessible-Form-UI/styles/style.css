@@ -1,5 +1,20 @@
 /*! Styles */
-/* :root{} */
+:root {
+	--progress-percent: 65%;
+	--s1px: 0.0625rem;
+	--s2px: 0.125rem;
+	--s22px: 1.375rem;
+	--s14px: 0.875rem;
+	--s1320px: 82.5rem;
+	--color-00: #444444;
+	--color-01: #000000;
+	--color-02: #b00020;
+	--color-03: #fff0f0;
+	--color-04: #ff0000;
+	--color-05: #dddddd;
+	--color-06: #ffffff;
+	--color-07: #e4e4e4;
+}
 * {
 	box-sizing: border-box;
 	margin: 0;
@@ -14,15 +29,18 @@ ul {
 input {
 	all: unset;
 	padding: 0.5rem 0 0.5rem 0.5rem;
-	border: 1px solid #444;
+	border: var(--s1px) solid var(--color-00);
 	border-radius: 0.5rem;
 	max-width: 16rem;
+}
+input:focus {
+	border: 0.125rem solid var(--color-01);
 }
 label {
 	font-weight: 600;
 }
 .container {
-	max-width: 1320px;
+	max-width: var(--s1320px);
 	padding-left: 1rem;
 	padding-right: 1rem;
 	margin-left: auto;
@@ -36,13 +54,14 @@ label {
 .error {
 	padding: 0.5rem;
 	border-radius: 0.5rem;
-	color: #b00020;
-	background-color: #fff0f0;
+	color: var(--color-02);
+	/* Contrast : 6.62:1 */
+	background-color: var(--color-03);
 	max-width: 16rem;
 }
 .error-input {
-	border: 2px solid red !important;
-	color: red !important;
+	border: var(--s2px) solid var(--color-04) !important;
+	color: var(--color-04) !important;
 }
 .hidden {
 	display: none;
@@ -71,16 +90,24 @@ label {
 .show-hide-btn {
 	all: unset;
 	cursor: pointer;
-	border: 1px solid #444;
+	border: var(--s1px) solid var(--color-00);
 	border-radius: 0.5rem;
 	border-left: none;
 	border-top-left-radius: 0;
 	border-bottom-left-radius: 0;
 	padding-right: 0.3rem;
+	transition: all 100ms ease-out;
+}
+.show-hide-btn:focus {
+	border: var(--s2px) solid var(--color-01);
+}
+.show-hide-btn:active {
+	transform: scale(0.9);
 }
 .progress {
-	padding: 1rem;
+	padding: 1rem 0 1rem 0;
 	text-align: center;
+	justify-self: start;
 }
 .progress-bar {
 	display: flex;
@@ -88,36 +115,73 @@ label {
 	align-items: center;
 	gap: 2rem;
 }
-/* .main-circle {} */
-/* .progress-circle {} */
-/* .progress-percent {} */
-.progress-title {
-	font-weight: 500;
-	text-wrap: nowrap;
+.progress-circle {
+	width: 6rem;
+	height: 6rem;
+	border-radius: 50%;
+	background-image: conic-gradient(
+		var(--color-01) 0% var(--progress-percent),
+		var(--color-05) var(--progress-percent) 100%
+	);
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
-/* .progress-list-container {} */
-/* .progress-list {} */
-/* .progress-item {} */
+.constant-circle {
+	width: 5.5rem;
+	height: 5.5rem;
+	border-radius: 50%;
+	background-color: var(--color-06);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.progress-percent {
+	font-size: var(--s22px);
+	font-weight: 600;
+}
+.progress-title {
+	font-size: 1.1rem;
+	font-weight: 600;
+}
+.progress-list-container {
+	min-height: 16rem;
+	margin-top: 2rem;
+	background-color: var(--color-07);
+	/* Contrast:7.66:1 */
+	padding: 1.5rem;
+	border-radius: 1.5rem;
+	text-align: start;
+}
+.progress-item {
+	font-size: var(--s14px);
+	margin-top: 0.7rem;
+}
+.progress-done {
+	text-decoration: line-through;
+	color: var(--color-00);
+}
 
-/* #name {} */
-/* #email {} */
 #password,
 #confirm-password {
 	border-right: none;
 	border-top-right-radius: 0;
 	border-bottom-right-radius: 0;
 }
-/* #password-toggle {} */
-/* #password-error {} */
-/* #confirm-password {} */
-/* #confirm-password-toggle {} */
-/* #confirm-error {} */
 #submit-btn {
 	all: unset;
 	text-align: center;
-	background-color: #000;
-	color: #fff;
+	background-color: var(--color-01);
+	color: var(--color-06);
 	padding: 1rem;
 	border-radius: 0.5rem;
 	max-width: 16rem;
+	cursor: pointer;
+	transition: all 100ms ease-out;
+}
+#submit-btn:active {
+	transform: scale(0.9);
+}
+#submit-btn:focus {
+	border: var(--s2px) solid var(--color-04);
 }
