@@ -23,12 +23,14 @@
 							required
 							aria-required="true"
 							aria-invalid="true"
+							placeholder="What should we call you?"
 						/>
 					</li>
 
 					<li class="form-field">
 						<label for="email">Email</label>
 						<input
+							class="error-input"
 							type="email"
 							name="email"
 							id="email"
@@ -36,8 +38,9 @@
 							aria-required="true"
 							aria-describedby="email-error"
 							aria-invalid="true"
+							placeholder="example@email.com"
 						/>
-						<span class="error hidden" id="email-error"
+						<span class="error" id="email-error"
 							>Email is already taken!</span
 						>
 					</li>
@@ -53,6 +56,7 @@
 								aria-required="true"
 								aria-describedby="password-error"
 								aria-invalid="true"
+								placeholder="××××××××"
 							/>
 							<button
 								class="show-hide-btn"
@@ -80,6 +84,7 @@
 								aria-required="true"
 								aria-describedby="confirm-error"
 								aria-invalid="true"
+								placeholder="××××××××"
 							/>
 							<button
 								class="show-hide-btn"

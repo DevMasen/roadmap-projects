@@ -7,6 +7,20 @@
 body {
 	font-family: 'Inter';
 }
+ul {
+	list-style: none;
+	padding: 0;
+}
+input {
+	all: unset;
+	padding: 0.5rem 0 0.5rem 0.5rem;
+	border: 1px solid #444;
+	border-radius: 0.5rem;
+	max-width: 16rem;
+}
+label {
+	font-weight: 600;
+}
 .container {
 	max-width: 1320px;
 	padding-left: 1rem;
@@ -15,36 +29,95 @@ body {
 	margin-right: auto;
 	margin-top: 1rem;
 	margin-bottom: 20rem;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 2rem;
 }
 .error {
+	padding: 0.5rem;
+	border-radius: 0.5rem;
 	color: #b00020;
 	background-color: #fff0f0;
+	max-width: 16rem;
+}
+.error-input {
+	border: 2px solid red !important;
+	color: red !important;
 }
 .hidden {
 	display: none;
 }
 
-/* .signup-form {} */
-/* .fields {} */
-/* .form-field {} */
-/* .password-container {} */
-/* .show-hide-btn {} */
-/* .progress {} */
-/* .progress-bar {} */
+.signup-form {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+	justify-self: end;
+}
+.fields {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	padding: 1rem;
+}
+.form-field {
+	display: flex;
+	flex-direction: column;
+	gap: 0.3rem;
+}
+.password-container {
+	display: flex;
+}
+.show-hide-btn {
+	all: unset;
+	cursor: pointer;
+	border: 1px solid #444;
+	border-radius: 0.5rem;
+	border-left: none;
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
+	padding-right: 0.3rem;
+}
+.progress {
+	padding: 1rem;
+	text-align: center;
+}
+.progress-bar {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 2rem;
+}
 /* .main-circle {} */
 /* .progress-circle {} */
 /* .progress-percent {} */
-/* .progress-title {} */
+.progress-title {
+	font-weight: 500;
+	text-wrap: nowrap;
+}
 /* .progress-list-container {} */
 /* .progress-list {} */
 /* .progress-item {} */
 
 /* #name {} */
 /* #email {} */
-/* #password {} */
+#password,
+#confirm-password {
+	border-right: none;
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
+}
 /* #password-toggle {} */
 /* #password-error {} */
 /* #confirm-password {} */
 /* #confirm-password-toggle {} */
 /* #confirm-error {} */
-/* #submit-btn {} */
+#submit-btn {
+	all: unset;
+	text-align: center;
+	background-color: #000;
+	color: #fff;
+	padding: 1rem;
+	border-radius: 0.5rem;
+	max-width: 16rem;
+}
