@@ -16,6 +16,7 @@
 -   Project 4 : [Changelog Component](https://roadmap.sh/projects/changelog-component)
 -   Project 5 : [Testimonial Cards](https://roadmap.sh/projects/testimonial-cards)
 -   Project 6 : [Datepicker UI](https://roadmap.sh/projects/datepicker-ui)
+-   Project 7: [Accessible Form UI](https://roadmap.sh/projects/accessible-form-ui)
 
 ---
 
@@ -79,6 +80,16 @@
         <h2>Datepicker UI</h2>
       </a>
       <p>A simple datepicker UI using HTML and CSS</p>
+    </td>
+  </tr>
+  <tr><td height="100px"></td></tr>
+  <tr>
+    <td align="center" valign="top">
+      <a href="./Frontend_Projects/Accessible-Form-UI/">
+        <img src="./Frontend_Projects/Accessible-Form-UI/img/banner-2.png" alt="Card 7" width="550px" />
+        <h2>Accessible Form UI</h2>
+      </a>
+      <p>An accessible form UI using HTML and CSS</p>
     </td>
   </tr>
 </table>
