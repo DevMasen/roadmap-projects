@@ -9,6 +9,9 @@
 
 /* Large (lg) - ≤1199px */
 @media (max-width: 1199.98px) {
+	body {
+		padding: 0 10rem;
+	}
 	.container {
 		max-width: 960px;
 	}
@@ -16,6 +19,9 @@
 
 /* Medium (md) - ≤991px */
 @media (max-width: 991.98px) {
+	body {
+		padding: 0 8rem;
+	}
 	.container {
 		max-width: 720px;
 	}
@@ -23,6 +29,9 @@
 
 /* Small (sm) - ≤767px */
 @media (max-width: 767.98px) {
+	body {
+		padding: 0;
+	}
 	.container {
 		max-width: 540px;
 	}

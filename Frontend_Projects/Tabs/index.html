@@ -7,10 +7,49 @@
 		<link rel="stylesheet" href="./styles/style.css" />
 		<link rel="stylesheet" href="./styles/responsive.css" />
 
+		<!-- Fonts -->
+		<style>
+			@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+		</style>
+
 		<!-- External JavaScript -->
 		<script src="./js/script.js" defer></script>
 	</head>
 	<body>
-		<div class="container"></div>
+		<div class="container">
+			<ul class="tabs">
+				<li class="tab active-tab" data-tab-number="1">
+					<span>First Tab</span>
+				</li>
+				<li class="tab" data-tab-number="2">
+					<span>Socond Tab</span>
+				</li>
+				<li class="tab" data-tab-number="3"><span>Third Tab</span></li>
+				<li class="tab" data-tab-number="4"><span>Fourth Tab</span></li>
+			</ul>
+			<p class="tab-header">
+				Clicking each tab should hide the content of the other tab and
+				show the content of clicked tab. By default, enable the first
+				tab.
+			</p>
+			<div class="tab-content">
+				<div class="tab-element active-element" id="tab-element-1">
+					<p>First Tab content</p>
+				</div>
+				<div class="tab-element" id="tab-element-2">
+					<p>Second Tab content</p>
+				</div>
+				<div class="tab-element" id="tab-element-3">
+					<p>Third Tab content</p>
+				</div>
+				<div class="tab-element" id="tab-element-4">
+					<p>Fourth Tab content</p>
+				</div>
+			</div>
+			<p class="tab-footer">
+				Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+				Impedit, magnam!
+			</p>
+		</div>
 	</body>
 </html>
