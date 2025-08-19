@@ -9,7 +9,10 @@
 
 ### In this project I used topics below:
 
--   ...
+-   Absolute positioning and box model
+-   CSS transform and transition for smooth little animations
+-   Using CSS hover effect and engaging no JavaScript
+-   Three smooth effect: slide-in , fade-in , scale-in
 
 ### Use `live-server` on `index.html` path to see the result
 

@@ -70,6 +70,7 @@ body {
 #tooltip-3 {
 	left: 0;
 	transform: scale(0);
+	/* transform: scale(1); */
 	transition: all 200ms ease-in-out;
 }
 #tooltip-3 > .tooltip-arrow {
