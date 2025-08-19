@@ -18,6 +18,7 @@
 -   Project 6 : [Datepicker UI](https://roadmap.sh/projects/datepicker-ui)
 -   Project 7 : [Accessible Form UI](https://roadmap.sh/projects/accessible-form-ui)
 -   Project 8 : [Image Grid Layout](https://roadmap.sh/projects/image-grid)
+-   Project 9 : [Tooltip UI](https://roadmap.sh/projects/tooltip-ui)
 
 ---
 
@@ -101,6 +102,16 @@
         <h2>Image Grid Layout</h2>
       </a>
       <p>A grid layout of images using HTML and CSS</p>
+    </td>
+  </tr>
+  <tr><td height="100px"></td></tr>
+  <tr>
+    <td align="center" valign="top">
+      <a href="./Frontend_Projects/Tooltip-UI/">
+        <img src="./Frontend_Projects/Tooltip-UI/img/banner-2.png" alt="Card 9" width="550px" />
+        <h2>Tooltip UI</h2>
+      </a>
+      <p>A tooltip for navigation items using only HTML and CSS</p>
     </td>
   </tr>
 </table>
