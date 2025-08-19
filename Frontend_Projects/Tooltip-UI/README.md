@@ -3,7 +3,7 @@
 <img align="center" width="420px" src="./img/banner.png" alt="Banner Image">
 </p>
 
-##
+## A tooltip for navigation items using only HTML and CSS.
 
 ### A Frontend Project by [roadmap.sh](https://roadmap.sh/frontend/projects)
 
