@@ -19,6 +19,7 @@
 -   Project 7 : [Accessible Form UI](https://roadmap.sh/projects/accessible-form-ui)
 -   Project 8 : [Image Grid Layout](https://roadmap.sh/projects/image-grid)
 -   Project 9 : [Tooltip UI](https://roadmap.sh/projects/tooltip-ui)
+-   Project 10 : [Tabs](https://roadmap.sh/projects/simple-tabs)
 
 ---
 
@@ -112,6 +113,16 @@
         <h2>Tooltip UI</h2>
       </a>
       <p>A tooltip for navigation items using only HTML and CSS</p>
+    </td>
+  </tr>
+  <tr><td height="100px"></td></tr>
+  <tr>
+    <td align="center" valign="top">
+      <a href="./Frontend_Projects/Tabs/">
+        <img src="./Frontend_Projects/Tabs/img/banner-2.png" alt="Card 10" width="550px" />
+        <h2>Tabs</h2>
+      </a>
+      <p>A simple tabs component using HTML, CSS, and JavaScript</p>
     </td>
   </tr>
 </table>
