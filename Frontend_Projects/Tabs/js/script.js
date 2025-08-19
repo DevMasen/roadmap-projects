@@ -1,0 +1,2 @@
+//! Interactive Scripts
+'strict mode';
