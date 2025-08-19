@@ -27,7 +27,7 @@ body {
 	text-align: center;
 }
 #nav-item-1:hover #tooltip-1 {
-	transform: translate(47rem);
+	transform: translate(50rem);
 }
 #nav-item-2:hover #tooltip-2 {
 	opacity: 1;
@@ -53,10 +53,11 @@ body {
 }
 #tooltip-1 {
 	left: -50rem;
+	/* left: 0; */
 	transition: all 100ms ease-in-out;
 }
 #tooltip-1 > .tooltip-arrow {
-	left: 79px;
+	left: 29px;
 }
 #tooltip-2 {
 	opacity: 0;
@@ -67,12 +68,12 @@ body {
 	left: 144px;
 }
 #tooltip-3 {
-	left: 10rem;
+	left: 0;
 	transform: scale(0);
 	transition: all 200ms ease-in-out;
 }
 #tooltip-3 > .tooltip-arrow {
-	left: 97px;
+	right: 66px;
 	display: none;
 }
 .tooltip-text {
