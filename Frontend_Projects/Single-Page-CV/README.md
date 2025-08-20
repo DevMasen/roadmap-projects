@@ -17,3 +17,7 @@
 ### Use `live-server` on `index.html` path to see the result
 
 ### `live-server` global installation with npm : `npm install -g live-server`
+
+### Please vote for the project with [THIS URL](https://roadmap.sh/projects/single-page-cv/solutions?u=66107474da1671f986289b45) if it was useful.
+
+### Thanks for your visit ❤️
