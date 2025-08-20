@@ -5,6 +5,9 @@
 	.container {
 		max-width: 1140px;
 	}
+	.cookie-consent {
+		width: 30rem;
+	}
 }
 
 /* Large (lg) - ≤1199px */
@@ -14,6 +17,9 @@
 	}
 	.container {
 		max-width: 960px;
+	}
+	.cookie-consent {
+		width: 25rem;
 	}
 }
 
@@ -25,6 +31,9 @@
 	.container {
 		max-width: 720px;
 	}
+	.cookie-consent {
+		width: 20rem;
+	}
 }
 
 /* Small (sm) - ≤767px */
@@ -35,11 +44,17 @@
 	.container {
 		max-width: 540px;
 	}
+	.cookie-consent {
+		width: 18rem;
+	}
 }
 
 /* Extra Small (xs) - ≤575px */
 @media (max-width: 575.98px) {
 	.container {
 		width: 100%;
+	}
+	.cookie-consent {
+		width: 15rem;
 	}
 }
