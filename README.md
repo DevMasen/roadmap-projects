@@ -20,6 +20,7 @@
 -   Project 8 : [Image Grid Layout](https://roadmap.sh/projects/image-grid)
 -   Project 9 : [Tooltip UI](https://roadmap.sh/projects/tooltip-ui)
 -   Project 10 : [Tabs](https://roadmap.sh/projects/simple-tabs)
+-   Project 11 : [Cookie Consent](https://roadmap.sh/projects/cookie-consent)
 
 ---
 
@@ -123,6 +124,16 @@
         <h2>Tabs</h2>
       </a>
       <p>A simple tabs component using HTML, CSS, and JavaScript</p>
+    </td>
+  </tr>
+  <tr><td height="100px"></td></tr>
+  <tr>
+    <td align="center" valign="top">
+      <a href="./Frontend_Projects/Cookie-Consent/">
+        <img src="./Frontend_Projects/Cookie-Consent/img/banner-2.png" alt="Card 11" width="550px" />
+        <h2>Cookie Consent</h2>
+      </a>
+      <p>A simple cookie consent banner using JavaScript</p>
     </td>
   </tr>
 </table>
