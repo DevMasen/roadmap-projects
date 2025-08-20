@@ -1,5 +1,5 @@
 //! Interactive Scripts
-'strict mode';
+'use strict';
 const tabList = document.querySelector('.tabs');
 const tabItems = tabList.querySelectorAll('.tab');
 const contentElements = document.querySelectorAll('.tab-element');
