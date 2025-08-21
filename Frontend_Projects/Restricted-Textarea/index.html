@@ -11,6 +11,22 @@
 		<script src="./js/script.js" defer></script>
 	</head>
 	<body>
-		<div class="container"></div>
+		<div class="container">
+			<h1 class="title">Write your Message</h1>
+			<div class="textarea-container">
+				<textarea
+					name="message"
+					id="message"
+					placeholder="Start typing..."
+					maxlength="250"
+				></textarea>
+				<div class="textarea-stats">
+					<div class="counter">
+						<span id="typed-letters"></span> /
+						<span id="limit"></span>
+					</div>
+				</div>
+			</div>
+		</div>
 	</body>
 </html>
