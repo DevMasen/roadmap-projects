@@ -22,6 +22,7 @@
 -   Project 10 : [Tabs](https://roadmap.sh/projects/simple-tabs)
 -   Project 11 : [Cookie Consent](https://roadmap.sh/projects/cookie-consent)
 -   Project 12 : [Restricted Textarea](https://roadmap.sh/projects/restricted-textarea)
+-   Project 13 : [Accordion](https://roadmap.sh/projects/accordion)
 
 ---
 
@@ -145,6 +146,16 @@
         <h2>Restricted Textarea</h2>
       </a>
       <p>A textarea with live character count and a max character limit</p>
+    </td>
+  </tr>
+  <tr><td height="100px"></td></tr>
+  <tr>
+    <td align="center" valign="top">
+      <a href="./Frontend_Projects/Accordion/">
+        <img src="./Frontend_Projects/Accordion/img/banner-2.png" alt="Card 13" width="550px" />
+        <h2>Accordion</h2>
+      </a>
+      <p>An accordion component using HTML, CSS, and JavaScript</p>
     </td>
   </tr>
 </table>
