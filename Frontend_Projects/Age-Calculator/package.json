@@ -1,0 +1,23 @@
+{
+  "name": "age-calculator",
+  "version": "1.0.0",
+  "description": "An age calculator application",
+  "homepage": "https://github.com/DevMasen/roadmap-projects#readme",
+  "bugs": {
+    "url": "https://github.com/DevMasen/roadmap-projects/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DevMasen/roadmap-projects.git"
+  },
+  "license": "MIT",
+  "author": "DevMasen",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "luxon": "^3.7.1"
+  }
+}
