@@ -26,11 +26,15 @@
 	.container {
 		max-width: 540px;
 	}
+	.accordion {
+		width: 30rem;
+	}
 }
 
 /* Extra Small (xs) - ≤575px */
 @media (max-width: 575.98px) {
-	.container {
+	.container,
+	.accordion {
 		width: 100%;
 	}
 }
