@@ -6,6 +6,10 @@ body {
 	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
 		'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
+ul {
+	list-style: none;
+	padding: 0;
+}
 .container {
 	max-width: 1320px;
 	margin-left: auto;
@@ -15,14 +19,67 @@ body {
 	padding: 1rem;
 }
 
-/* .accordion{} */
-/* .title{} */
-/* .title-more{} */
-/* .accordrion-tabs{} */
-/* .tab-list{} */
-/* .tab-item{} */
-/* .question-box{} */
-/* .question{} */
-/* .arrow{} */
-/* .answer-box{} */
-/* .answer{} */
+.accordion {
+	margin-top: 3rem;
+}
+.title {
+	font-size: 32px;
+	font-weight: 500;
+}
+.title-more {
+	margin-top: 0.5rem;
+	color: #555;
+}
+.accordrion-tabs {
+	margin-top: 3rem;
+}
+.tab-list {
+	display: flex;
+	flex-direction: column;
+	gap: 0.2rem;
+}
+
+.question-box {
+	padding: 0.9rem;
+	border-radius: 0.7rem;
+	background-color: #000;
+	color: #fff;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	cursor: pointer;
+}
+.question-box.open .arrow {
+	transform: rotate(90deg);
+}
+.question {
+	font-weight: 400;
+}
+.arrow {
+	display: flex;
+	justify-content: center;
+}
+
+.answer-box {
+	border-radius: 0.7rem;
+	transition: height 200ms ease-out, padding 200ms ease-out,
+		margin 200ms ease-out, border 200ms ease-out;
+	overflow: hidden; /* Prevents content overflow during height transition */
+	height: 0;
+	margin: 0;
+	padding: 0 0.9rem;
+	border-top: 0;
+	border-bottom: 0;
+}
+
+.answer-box.visible {
+	opacity: 1;
+	height: fit-content;
+	margin: 0.2rem 0;
+	padding: 0.9rem;
+	border: 2px solid #000;
+}
+
+.answer {
+	line-height: 1.4rem;
+}
