@@ -21,6 +21,7 @@
 -   Project 9 : [Tooltip UI](https://roadmap.sh/projects/tooltip-ui)
 -   Project 10 : [Tabs](https://roadmap.sh/projects/simple-tabs)
 -   Project 11 : [Cookie Consent](https://roadmap.sh/projects/cookie-consent)
+-   Project 12 : [Restricted Textarea](https://roadmap.sh/projects/restricted-textarea)
 
 ---
 
@@ -134,6 +135,16 @@
         <h2>Cookie Consent</h2>
       </a>
       <p>A simple cookie consent banner using JavaScript</p>
+    </td>
+  </tr>
+  <tr><td height="100px"></td></tr>
+  <tr>
+    <td align="center" valign="top">
+      <a href="./Frontend_Projects/Restricted-Textarea/">
+        <img src="./Frontend_Projects/Restricted-Textarea/img/banner-2.png" alt="Card 12" width="550px" />
+        <h2>Restricted Textarea</h2>
+      </a>
+      <p>A textarea with live character count and a max character limit</p>
     </td>
   </tr>
 </table>
