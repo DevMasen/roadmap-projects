@@ -48,6 +48,7 @@ body {
 /* .table-body{} */
 /* .table__body{} */
 /* .table-body__tr{} */
+/* .table-row__td{} */
 /* .submit{} */
 /* .form__submit-container{} */
 /* .submit__button{} */
@@ -57,3 +58,5 @@ body {
 /* .result__years{} */
 /* .result__months{} */
 /* .result__days{} */
+/* .error{} */
+/* .error__message{} */
