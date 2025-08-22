@@ -79,12 +79,10 @@
 						class="birthdate__input"
 						id="birthdate"
 						placeholder="dd / mm / yyyy"
-						required
 						aria-invalid="true"
 						aria-describedby="birthdate-error"
-						aria-required="true"
 					/>
-					<button class="date-btn birthdate__button">
+					<button type="button" class="date-btn birthdate__button">
 						<img
 							src="./img/icons8-birthdate-64.png"
 							alt="🗓️"
@@ -96,6 +94,7 @@
 				<div class="datepicker form__datepicker-container">
 					<div class="slider datepicker__slider-container">
 						<button
+							type="button"
 							class="slider-btn slider__button slider--button-1"
 						>
 							<img
@@ -110,6 +109,7 @@
 							<span class="monthxyear__year">2022</span>
 						</div>
 						<button
+							type="button"
 							class="slider-btn slider__button slider--button-2"
 						>
 							<img
@@ -193,6 +193,11 @@
 					You are <span class="result__years">X</span> years
 					<span class="result__months">Y</span> months and
 					<span class="result__days">Z</span> days old
+				</p>
+			</section>
+			<section class="error">
+				<p class="error__message" id="birthdate-error">
+					There is an Error!
 				</p>
 			</section>
 		</div>
