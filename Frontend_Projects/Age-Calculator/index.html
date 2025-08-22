@@ -26,13 +26,37 @@
 		<meta property="og:locale" content="en_US" />
 
 		<!-- Favicon Tags -->
-		<link rel="icon" type="image/x-icon" href="" sizes="any" />
-		<link rel="icon" type="image/png" href="" sizes="32x32" />
-		<link rel="icon" type="image/png" href="" sizes="16x16" />
-		<link rel="apple-touch-icon" type="image/png" href="" sizes="180x180" />
-		<link rel="icon" type="image/png" href="" sizes="192x192" />
-		<link rel="icon" type="image/png" href="" sizes="512x512" />
-		<link rel="manifest" href="" />
+		<link
+			rel="icon"
+			type="image/x-icon"
+			href="./favicon/favicon.ico"
+			sizes="any"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			href="./favicon/favicon-32x32.png"
+			sizes="32x32"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			href="./favicon/favicon-16x16.png"
+			sizes="16x16"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			href="./favicon/android-chrome-192x192.png"
+			sizes="192x192"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			href="./favicon/android-chrome-512x512.png"
+			sizes="512x512"
+		/>
+		<link rel="manifest" href="./favicon/site.webmanifest" />
 
 		<!-- Stylesheet -->
 		<link rel="stylesheet" href="./styles/style.css" />
@@ -42,6 +66,135 @@
 		<script src="./js/script.js" type="module" defer></script>
 	</head>
 	<body>
-		<div class="container"></div>
+		<div class="container">
+			<h1 class="container__title">Age Calculator</h1>
+
+			<form action="#" class="form">
+				<label for="birthdate" class="form__label"
+					>Enter your birth date:
+				</label>
+				<div class="birthdate form__input-container">
+					<input
+						type="text"
+						class="birthdate__input"
+						id="birthdate"
+						placeholder="dd / mm / yyyy"
+						required
+						aria-invalid="true"
+						aria-describedby="birthdate-error"
+						aria-required="true"
+					/>
+					<button class="date-btn birthdate__button">
+						<img
+							src="./img/icons8-birthdate-64.png"
+							alt="🗓️"
+							class="date-btn__image"
+							width="16px"
+						/>
+					</button>
+				</div>
+				<div class="datepicker form__datepicker-container">
+					<div class="slider datepicker__slider-container">
+						<button
+							class="slider-btn slider__button slider--button-1"
+						>
+							<img
+								class="slider-btn__image"
+								src="./img/icons8-back-48.png"
+								alt="<"
+								width="16px"
+							/>
+						</button>
+						<div class="monthxyear slider__monthxyear-container">
+							<span class="monthxyear__month">December</span>
+							<span class="monthxyear__year">2022</span>
+						</div>
+						<button
+							class="slider-btn slider__button slider--button-2"
+						>
+							<img
+								class="slider-btn__image"
+								src="./img/icons8-forward-48.png"
+								alt=">"
+								width="16px"
+							/>
+						</button>
+					</div>
+
+					<table class="table datepicker__table">
+						<thead class="table-head table__thead">
+							<tr class="table-row table-head__tr">
+								<th class="table-row__th">S</th>
+								<th class="table-row__th">M</th>
+								<th class="table-row__th">T</th>
+								<th class="table-row__th">W</th>
+								<th class="table-row__th">T</th>
+								<th class="table-row__th">F</th>
+								<th class="table-row__th">S</th>
+							</tr>
+						</thead>
+						<tbody class="table-body table__body">
+							<tr class="table-row table-body__tr">
+								<td table-row__td></td>
+								<td table-row__td></td>
+								<td table-row__td></td>
+								<td table-row__td></td>
+								<td table-row__td>1</td>
+								<td table-row__td>2</td>
+								<td table-row__td>3</td>
+							</tr>
+							<tr class="table-row table-body__tr">
+								<td table-row__td>4</td>
+								<td table-row__td>5</td>
+								<td table-row__td>6</td>
+								<td table-row__td>7</td>
+								<td table-row__td>8</td>
+								<td table-row__td>9</td>
+								<td table-row__td>10</td>
+							</tr>
+							<tr class="table-row table-body__tr">
+								<td table-row__td>11</td>
+								<td table-row__td>12</td>
+								<td table-row__td>13</td>
+								<td table-row__td>14</td>
+								<td table-row__td>15</td>
+								<td table-row__td>16</td>
+								<td table-row__td>17</td>
+							</tr>
+							<tr class="table-row table-body__tr">
+								<td table-row__td>18</td>
+								<td table-row__td>19</td>
+								<td table-row__td>20</td>
+								<td table-row__td>21</td>
+								<td table-row__td>22</td>
+								<td table-row__td>23</td>
+								<td table-row__td>24</td>
+							</tr>
+							<tr class="table-row table-body__tr">
+								<td table-row__td>25</td>
+								<td table-row__td>26</td>
+								<td table-row__td>27</td>
+								<td table-row__td>28</td>
+								<td table-row__td>29</td>
+								<td table-row__td>30</td>
+								<td table-row__td>31</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="submit form__submit-container">
+					<button type="submit" class="submit__button">
+						Calculate
+					</button>
+				</div>
+			</form>
+			<section class="output">
+				<p class="result output__paraghraph">
+					You are <span class="result__years">X</span> years
+					<span class="result__months">Y</span> months and
+					<span class="result__days">Z</span> days old
+				</p>
+			</section>
+		</div>
 	</body>
 </html>
