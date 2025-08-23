@@ -62,6 +62,11 @@
 		<link rel="stylesheet" href="./styles/style.css" />
 		<link rel="stylesheet" href="./styles/responsive.css" />
 
+		<!-- Fonts -->
+		<style>
+			@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+		</style>
+
 		<!-- External JavaScript -->
 		<script src="./js/script.js" type="module" defer></script>
 	</head>
@@ -71,7 +76,7 @@
 
 			<form action="#" class="form">
 				<label for="birthdate" class="form__label"
-					>Enter your birth date:
+					>Enter your birth date :
 				</label>
 				<div class="birthdate form__input-container">
 					<input
@@ -83,12 +88,7 @@
 						aria-describedby="birthdate-error"
 					/>
 					<button type="button" class="date-btn birthdate__button">
-						<img
-							src="./img/icons8-birthdate-64.png"
-							alt="🗓️"
-							class="date-btn__image"
-							width="16px"
-						/>
+						🗓️
 					</button>
 				</div>
 				<div class="datepicker form__datepicker-container">
@@ -101,7 +101,6 @@
 								class="slider-btn__image"
 								src="./img/icons8-back-48.png"
 								alt="<"
-								width="16px"
 							/>
 						</button>
 						<div class="monthxyear slider__monthxyear-container">
@@ -116,7 +115,6 @@
 								class="slider-btn__image"
 								src="./img/icons8-forward-48.png"
 								alt=">"
-								width="16px"
 							/>
 						</button>
 					</div>
@@ -190,9 +188,13 @@
 			</form>
 			<section class="output">
 				<p class="result output__paraghraph">
-					You are <span class="result__years">X</span> years
-					<span class="result__months">Y</span> months and
-					<span class="result__days">Z</span> days old
+					You are
+					<b>
+						<strong class="result__years">X</strong> years
+						<strong class="result__months">Y</strong> months and
+						<strong class="result__days">Z</strong> days
+					</b>
+					old
 				</p>
 			</section>
 			<section class="error">
