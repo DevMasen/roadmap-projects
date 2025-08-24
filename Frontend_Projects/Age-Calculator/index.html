@@ -83,7 +83,7 @@
 						type="text"
 						class="birthdate__input"
 						id="birthdate"
-						placeholder="dd / mm / yyyy"
+						placeholder="dd/mm/yyyy"
 						aria-invalid="true"
 						aria-describedby="birthdate-error"
 					/>
@@ -104,8 +104,35 @@
 							/>
 						</button>
 						<div class="monthxyear slider__monthxyear-container">
-							<span class="monthxyear__month">December</span>
-							<span class="monthxyear__year">2022</span>
+							<span class="monthxyear__month">
+								<select
+									class="month-select"
+									name="month"
+									id="month"
+								>
+									<option value="January">January</option>
+									<option value="February">February</option>
+									<option value="March">March</option>
+									<option value="April">April</option>
+									<option value="May">May</option>
+									<option value="June">June</option>
+									<option value="July">July</option>
+									<option value="August">August</option>
+									<option value="September">September</option>
+									<option value="October">October</option>
+									<option value="November">November</option>
+									<option value="December" selected>
+										December
+									</option>
+								</select>
+							</span>
+							<span class="monthxyear__year">
+								<select
+									class="year-select"
+									name="year"
+									id="year"
+								></select>
+							</span>
 						</div>
 						<button
 							type="button"
@@ -176,6 +203,15 @@
 								<td class="table-row__td">29</td>
 								<td class="table-row__td">30</td>
 								<td class="table-row__td">31</td>
+							</tr>
+							<tr class="table-row table-body__tr">
+								<td class="table-row__td"></td>
+								<td class="table-row__td"></td>
+								<td class="table-row__td"></td>
+								<td class="table-row__td"></td>
+								<td class="table-row__td"></td>
+								<td class="table-row__td"></td>
+								<td class="table-row__td"></td>
 							</tr>
 						</tbody>
 					</table>

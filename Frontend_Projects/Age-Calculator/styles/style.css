@@ -85,6 +85,9 @@ body {
 	flex-direction: column;
 	align-items: center;
 }
+.flex {
+	display: flex;
+}
 .slider {
 	width: 100%;
 	font-weight: 500;
@@ -122,6 +125,19 @@ body {
 }
 /* .monthxyear__month{} */
 /* .monthxyear__year{} */
+.year-select,
+.month-select {
+	font-family: 'Ubuntu', sans-serif;
+	text-align: center;
+	font-weight: 500;
+	/* opacity: 0.6; */
+	font-size: 18px;
+	border: none;
+	outline: none;
+	font-weight: 600;
+	appearance: none;
+	cursor: pointer;
+}
 /* .slider--button-2{} */
 .table {
 	width: 100%;
@@ -151,6 +167,10 @@ body {
 	&:active {
 		transform: scale(0.9);
 	}
+}
+.td-selected {
+	background-color: var(--color-01);
+	opacity: 1;
 }
 /* .submit {} */
 /* .form__submit-container {} */
