@@ -10,10 +10,8 @@ const tableDataElements = tableBody.querySelectorAll('.table-row__td');
 const birthDateInput = document.getElementById('birthdate');
 const yearSelect = document.querySelector('.year-select');
 const monthSelect = document.querySelector('.month-select');
-
-//! CSS root variables
-const root = document.documentElement;
-const computedStyles = getComputedStyle(root);
+const previousMonthBtn = document.querySelector('.slider--button-1');
+const nextMonthBtn = document.querySelector('.slider--button-2');
 
 //! Functions
 function addOptionsForYearSelect() {
