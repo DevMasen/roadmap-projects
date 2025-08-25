@@ -23,6 +23,7 @@
 -   Project 11 : [Cookie Consent](https://roadmap.sh/projects/cookie-consent)
 -   Project 12 : [Restricted Textarea](https://roadmap.sh/projects/restricted-textarea)
 -   Project 13 : [Accordion](https://roadmap.sh/projects/accordion)
+-   Project 14 : [Age Calculator](https://roadmap.sh/projects/age-calculator)
 
 ---
 
@@ -156,6 +157,16 @@
         <h2>Accordion</h2>
       </a>
       <p>An accordion component using HTML, CSS, and JavaScript</p>
+    </td>
+  </tr>
+  <tr><td height="100px"></td></tr>
+  <tr>
+    <td align="center" valign="top">
+      <a href="./Frontend_Projects/Age-Calculator/">
+        <img src="./Frontend_Projects/Age-Calculator/img/banner-2.png" alt="Card 14" width="550px" />
+        <h2>Age Calculator</h2>
+      </a>
+      <p>An age calculator using HTML, CSS, and JavaScript</p>
     </td>
   </tr>
 </table>
