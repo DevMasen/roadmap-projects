@@ -83,7 +83,8 @@
 						type="text"
 						class="birthdate__input"
 						id="birthdate"
-						placeholder="dd/mm/yyyy"
+						placeholder="dd/MM/yyyy"
+						maxlength="10"
 						aria-invalid="true"
 						aria-describedby="birthdate-error"
 					/>
@@ -146,7 +147,7 @@
 						</button>
 					</div>
 
-					<table class="table datepicker__table">
+					<table class="table datepicker__table" cellspacing="5px">
 						<thead class="table-head table__thead">
 							<tr class="table-row table-head__tr">
 								<th class="table-row__th">S</th>
@@ -226,17 +227,15 @@
 				<p class="result output__paraghraph">
 					You are
 					<b>
-						<strong class="result__years">X</strong> years
-						<strong class="result__months">Y</strong> months and
+						<strong class="result__years">X</strong> years,
+						<strong class="result__months">Y</strong> months, and
 						<strong class="result__days">Z</strong> days
 					</b>
 					old
 				</p>
 			</section>
 			<section class="error">
-				<p class="error__message" id="birthdate-error">
-					There is an Error!
-				</p>
+				<p class="error__message" id="birthdate-error">INVALID DATE!</p>
 			</section>
 		</div>
 	</body>
