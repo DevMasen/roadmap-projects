@@ -1,0 +1,42 @@
+.App {
+	max-width: 1320px;
+	margin: 1rem auto 5rem auto;
+	padding: 0 1rem;
+}
+
+/*! Responsive Layout */
+
+/* Extra Large (xl) - ≤1399px */
+@media (max-width: 1399.98px) {
+	.App {
+		max-width: 1140px;
+	}
+}
+
+/* Large (lg) - ≤1199px */
+@media (max-width: 1199.98px) {
+	.App {
+		max-width: 960px;
+	}
+}
+
+/* Medium (md) - ≤991px */
+@media (max-width: 991.98px) {
+	.App {
+		max-width: 720px;
+	}
+}
+
+/* Small (sm) - ≤767px */
+@media (max-width: 767.98px) {
+	.App {
+		max-width: 540px;
+	}
+}
+
+/* Extra Small (xs) - ≤575px */
+@media (max-width: 575.98px) {
+	.App {
+		width: 100%;
+	}
+}
