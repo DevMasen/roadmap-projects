@@ -1,8 +1,27 @@
 .App {
+	font-family: 'WDXL Lubrifont TC', sans-serif;
+	font-weight: 400;
+	font-style: normal;
 	max-width: 1320px;
 	margin: 1rem auto 5rem auto;
 	padding: 0 1rem;
 }
+
+/* .App {} */
+/* .container {} */
+/* .title {} */
+/* .progress-bar {} */
+/* .progress-percentage {} */
+/* .counter {} */
+/* .cur-count {} */
+/* .all-count {} */
+/* .slider {} */
+/* .card-list {} */
+/* .card {} */
+/* .question {} */
+/* .answer {} */
+/* .nav {} */
+/* .button {} */
 
 /*! Responsive Layout */
 
