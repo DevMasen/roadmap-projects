@@ -10,75 +10,109 @@ export default function App() {
 }
 
 function FlashCards() {
+	const [visibleCard, setVisibleCard] = useState(0);
+	const [isHidden, setIsHidden] = useState(true);
+	function handleShowHide() {
+		setIsHidden(!isHidden);
+	}
+	function handlePrevious() {
+		setVisibleCard(cur => cur - 1);
+		setIsHidden(true);
+	}
+	function handleNext() {
+		setVisibleCard(cur => cur + 1);
+		setIsHidden(true);
+	}
 	return (
 		<div className="container">
-			<h2 className="title">Flash Cards</h2>
-			<ProgressBar />
-			<Slider />
+			<h1 className="title">Flash Cards</h1>
+			<ProgressBar visibleCard={visibleCard} />
+			<Slider
+				visibleCard={visibleCard}
+				isHidden={isHidden}
+				onShowHide={handleShowHide}
+				onNext={handleNext}
+				onPrevious={handlePrevious}
+			/>
 		</div>
 	);
 }
 
-function ProgressBar() {
+function ProgressBar({ visibleCard }) {
+	const progressPercentage = Math.ceil(
+		((visibleCard + 1) / questions.length) * 100
+	);
 	return (
 		<div className="progress-bar">
-			<span className="progress-percentage">X</span>%
+			<div
+				style={{ width: `${progressPercentage}%` }}
+				className="progress"
+			>
+				{progressPercentage}%
+			</div>
 			<div className="counter">
-				<span className="cur-count">Y</span> of
-				<span className="all-count">Z</span>
+				<span>{visibleCard + 1}</span>
+				<span>of</span>
+				<span>{questions.length}</span>
 			</div>
 		</div>
 	);
 }
 
-function Slider() {
+function Slider({ visibleCard, isHidden, onShowHide, onNext, onPrevious }) {
 	return (
 		<div className="slider">
-			<CardList />
-			<Navigator />
+			<CardList isHidden={isHidden} visibleCard={visibleCard} />
+			<Navigator
+				onShowHide={onShowHide}
+				onPrevious={onPrevious}
+				onNext={onNext}
+				isHidden={isHidden}
+				visibleCard={visibleCard}
+			/>
 		</div>
 	);
 }
 
-function CardList() {
+function CardList({ isHidden, visibleCard }) {
 	return (
-		<ul className="card-list">
-			{questions.map(question => (
-				<Card question={question.question} answer={question.answer} />
-			))}
+		<ul>
+			{questions.map(
+				(question, index) =>
+					index === visibleCard && (
+						<Card
+							question={question.question}
+							answer={question.answer}
+							isHidden={isHidden}
+							key={question.id}
+						/>
+					)
+			)}
 		</ul>
 	);
 }
 
-function Card({ question, answer }) {
+function Card({ question, answer, isHidden }) {
 	return (
-		<li className="card">
-			<h1 className="question">{question}</h1>
+		<li className={`card ${!isHidden ? 'show' : ''}`}>
+			<h2 className="question">{question}</h2>
 			<p className="answer">{answer}</p>
 		</li>
 	);
 }
 
-function Navigator() {
-	const [isHidden, setIsHidden] = useState(true);
-
-	function handlePrevious() {}
-	function handleShowHide() {
-		setIsHidden(!isHidden);
-	}
-	function handleNext() {}
-
+function Navigator({ onShowHide, onPrevious, onNext, isHidden, visibleCard }) {
 	return (
 		<nav className="nav">
-			<Button onClick={handlePrevious}>
-				<img src="" alt="<" /> Previous
-			</Button>
-			<Button onClick={handleShowHide}>
+			{visibleCard !== 0 && (
+				<Button onClick={onPrevious}>⬅️ Previous</Button>
+			)}
+			<Button onClick={onShowHide}>
 				{isHidden ? 'Show Answer' : 'Hide Answer'}
 			</Button>
-			<Button onClick={handleNext}>
-				Next <img src="" alt=">" />
-			</Button>
+			{visibleCard !== questions.length - 1 && (
+				<Button onClick={onNext}>Next ➡️</Button>
+			)}
 		</nav>
 	);
 }

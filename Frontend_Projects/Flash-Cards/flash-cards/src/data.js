@@ -1,5 +1,10 @@
 const questions = [
 	{
+		id: 0,
+		question: 'What is the difference between var, let, and const?',
+		answer: 'In JavaScript, var is function-scoped and can be re-declared; let and const are block-scoped, with let allowing re-assignment and const preventing it. However, const objects can have their contents modified.',
+	},
+	{
 		id: 1,
 		question: 'What is JavaScript?',
 		answer: 'JavaScript is a lightweight, interpreted programming language primarily used to add interactivity and dynamic behavior to websites.',
