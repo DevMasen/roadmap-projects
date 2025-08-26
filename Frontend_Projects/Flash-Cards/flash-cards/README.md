@@ -1,6 +1,6 @@
 <h1 align="center"> Flash Cards 🎴<h1>
 <p align="center">
-<img align="center" width="720px" src="./img/banner.png" alt="Banner Image">
+<img align="center" width="420px" src="./img/banner.png" alt="Banner Image">
 </p>
 
 ## A flash card app using JavaScript frameworks
@@ -9,7 +9,13 @@
 
 ### In this project I used topics below:
 
--   ...
+-   Using React.js Library for creating components
+-   Using create-react-app for initializing the project
+-   Functional and component base programming
+-   Beginner topics of react like states, props, conditional rendering, conditional styling, and...
+-   Smooth and beautiful UI using CSS transitions and other features
+-   Responsive layout and suitable view for all type of devices
+-   Using suitable font and color pallet for better appearance
 
 ### Please vote for the project with [THIS URL]() if it was useful.
 
