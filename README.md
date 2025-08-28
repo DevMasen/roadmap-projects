@@ -25,6 +25,7 @@
 -   Project 13 : [Accordion](https://roadmap.sh/projects/accordion)
 -   Project 14 : [Age Calculator](https://roadmap.sh/projects/age-calculator)
 -   Project 15 : [Flash Cards](https://roadmap.sh/projects/flash-cards)
+-   Project 16 : [Custom Dropdown](https://roadmap.sh/projects/custom-dropdown)
 
 ---
 
@@ -178,6 +179,16 @@
         <h2>Flash Cards</h2>
       </a>
       <p>A flash card app using JavaScript frameworks</p>
+    </td>
+  </tr>
+  <tr><td height="100px"></td></tr>
+  <tr>
+    <td align="center" valign="top">
+      <a href="./Frontend_Projects/Custom-Dropdown/">
+        <img src="./Frontend_Projects/Custom-Dropdown/img/banner-2.png" alt="Card 16" width="550px" />
+        <h2>Custom Dropdown</h2>
+      </a>
+      <p>A custom dropdown using HTML, CSS, and JavaScript</p>
     </td>
   </tr>
 </table>

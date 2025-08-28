@@ -1,6 +1,6 @@
 <h1 align="center"> Custom Dropdown 🗄️<h1>
 <p align="center">
-<img align="center" width="720px" src="./img/banner.png" alt="Banner Image">
+<img align="center" width="320px" src="./img/banner.png" alt="Banner Image">
 </p>
 
 ## A custom dropdown using HTML, CSS, and JavaScript
@@ -9,7 +9,9 @@
 
 ### In this project I used topics below:
 
--   ...
+-   DOM manipulating
+-   Event Handling
+-   Responsive and Interactive element using JavaScript
 
 ### Use `live-server` on `index.html` path to see the result
 
