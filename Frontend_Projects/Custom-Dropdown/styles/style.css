@@ -29,12 +29,14 @@ ul {
 	place-items: center;
 }
 .dropdown-container {
+	min-width: 16rem;
 	display: flex;
 	flex-direction: column;
 	gap: 0.5rem;
 }
 .dropdown-selected,
 .dropdown-select {
+	width: 100%;
 	background-color: var(--color-02);
 	border: 2px solid var(--color-01);
 	border-radius: 0.8rem;
@@ -52,7 +54,7 @@ ul {
 }
 .selected-arrow {
 	width: 18px;
-	transition: transform 300ms ease-in;
+	transition: transform 100ms ease-in;
 }
 .dropdown-container.open .selected-arrow {
 	transform: rotate(180deg);
@@ -60,7 +62,7 @@ ul {
 .dropdown-select {
 	transform: scaleY(0);
 	transform-origin: top;
-	transition: transform 300ms ease-in;
+	transition: transform 100ms ease-in;
 }
 .dropdown-container.open .dropdown-select {
 	transform: scaleY(1);
