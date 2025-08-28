@@ -1,0 +1,54 @@
+html {
+	color-scheme: light dark;
+	font-family: system-ui;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+}
+* {
+	box-sizing: border-box;
+	margin: 0;
+}
+.container {
+	max-width: 1320px;
+	margin: 0 auto;
+	padding: 0 1rem;
+}
+
+/*! Responsive Layout */
+
+/* Extra Large (xl) - ≤1399px */
+@media (max-width: 1399.98px) {
+	.container {
+		max-width: 1140px;
+	}
+}
+
+/* Large (lg) - ≤1199px */
+@media (max-width: 1199.98px) {
+	.container {
+		max-width: 960px;
+	}
+}
+
+/* Medium (md) - ≤991px */
+@media (max-width: 991.98px) {
+	.container {
+		max-width: 720px;
+	}
+}
+
+/* Small (sm) - ≤767px */
+@media (max-width: 767.98px) {
+	.container {
+		max-width: 540px;
+	}
+}
+
+/* Extra Small (xs) - ≤575px */
+@media (max-width: 575.98px) {
+	.container {
+		width: 100%;
+	}
+}
