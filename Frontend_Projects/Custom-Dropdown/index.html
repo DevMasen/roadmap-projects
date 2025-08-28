@@ -2,14 +2,78 @@
 <html lang="en">
 	<head>
 		<title>Custom Dropdown</title>
+		<!-- Meta Tags -->
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="description" content="Custom Dropdown" />
+		<meta name="robots" content="index, follow" />
+		<link rel="canonical" href="#" />
 
 		<!-- Stylesheet -->
 		<link rel="stylesheet" href="./styles/style.css" />
+
+		<!-- Fonts -->
+		<style>
+			@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+		</style>
 
 		<!-- External JavaScript -->
 		<script src="./js/script.js" defer></script>
 	</head>
 	<body>
-		<div class="container"></div>
+		<div class="container">
+			<div class="dropdown-container open">
+				<div class="dropdown-selected">
+					<span class="selected-text">Select an Item</span>
+					<img
+						class="selected-arrow"
+						src="./img/icons8-arrow-down-100.png"
+						alt="🔽"
+					/>
+				</div>
+				<ul class="dropdown-select">
+					<li class="dropdown-option selected" data-id="1">
+						<span class="option-text">First Item</span>
+						<img
+							class="option-check"
+							src="./img/icons8-check-100.png"
+							alt="✅"
+						/>
+					</li>
+					<li class="dropdown-option" data-id="2">
+						<span class="option-text">Second Item</span>
+						<img
+							class="option-check"
+							src="./img/icons8-check-100.png"
+							alt="✅"
+						/>
+					</li>
+					<li class="dropdown-option" data-id="3">
+						<span class="option-text">Third Item</span>
+						<img
+							class="option-check"
+							src="./img/icons8-check-100.png"
+							alt="✅"
+						/>
+					</li>
+					<li class="dropdown-option" data-id="4">
+						<span class="option-text">Fourth Item</span>
+						<img
+							class="option-check"
+							src="./img/icons8-check-100.png"
+							alt="✅"
+						/>
+					</li>
+					<li class="dropdown-option" data-id="5">
+						<span class="option-text">Fifth Item</span>
+						<img
+							class="option-check"
+							src="./img/icons8-check-100.png"
+							alt="✅"
+						/>
+					</li>
+				</ul>
+			</div>
+		</div>
 	</body>
 </html>
