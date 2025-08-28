@@ -10,11 +10,26 @@ html {
 	box-sizing: border-box;
 	margin: 0;
 }
+ul {
+	list-style: none;
+	padding: 0;
+}
 .container {
 	max-width: 1320px;
 	margin: 0 auto;
 	padding: 0 1rem;
 }
+/* .title{} */
+/* .add-task-form{} */
+/* .add-task-input{} */
+/* .add-task-submit{} */
+/* .submit__img{} */
+/* .task-list{} */
+/* .task-item{} */
+/* .task-checkbox{} */
+/* .task-text{} */
+/* .task-delete{} */
+/* .delete__img{} */
 
 /*! Responsive Layout */
 
