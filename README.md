@@ -26,6 +26,7 @@
 -   Project 14 : [Age Calculator](https://roadmap.sh/projects/age-calculator)
 -   Project 15 : [Flash Cards](https://roadmap.sh/projects/flash-cards)
 -   Project 16 : [Custom Dropdown](https://roadmap.sh/projects/custom-dropdown)
+-   Project 17 : [Task Tracker](https://roadmap.sh/projects/task-tracker-js)
 
 ---
 
@@ -189,6 +190,16 @@
         <h2>Custom Dropdown</h2>
       </a>
       <p>A custom dropdown using HTML, CSS, and JavaScript</p>
+    </td>
+  </tr>
+  <tr><td height="100px"></td></tr>
+  <tr>
+    <td align="center" valign="top">
+      <a href="./Frontend_Projects/Task-Tracker/">
+        <img src="./Frontend_Projects/Task-Tracker/img/banner-2.png" alt="Card 17" width="550px" />
+        <h2>Task Tracker</h2>
+      </a>
+      <p>A task tracker with a to-do list using JavaScript</p>
     </td>
   </tr>
 </table>
