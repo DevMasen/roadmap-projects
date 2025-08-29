@@ -10,44 +10,46 @@
 	</head>
 	<body>
 		<div class="container">
-			<h1 class="title">Task Tracker</h1>
-			<form class="add-task-form">
-				<input
-					class="add-task-input"
-					type="text"
-					placeholder="Start writing and press enter to create task"
-					required
-					aria-required="true"
-				/>
-				<button class="add-task-submit" type="submit">
-					<img
-						class="submit__img"
-						src="../img/icons8-enter-key-96.png"
-						alt="enter"
-						width="22px"
-					/>
-				</button>
-			</form>
-			<ul class="task-list">
-				<li class="task-item">
+			<div class="task-tracker-container">
+				<h1 class="title">Task Tracker</h1>
+				<form class="add-task-form">
 					<input
-						class="task-checkbox"
-						type="checkbox"
-						aria-checked="false"
+						class="add-task-input"
+						type="text"
+						placeholder="Start writing and press enter to create task"
+						required
+						aria-required="true"
 					/>
-					<span class="task-text"
-						>New task is created and added to the list</span
-					>
-					<button class="task-delete" type="button">
+					<button class="add-task-submit" type="submit">
 						<img
-							class="delete__img"
-							src="../img/icons8-delete-128.png"
-							alt="delete"
-							width="20px"
+							class="submit__img"
+							src="../img/icons8-enter-key-96.png"
+							alt="enter"
 						/>
 					</button>
-				</li>
-			</ul>
+				</form>
+				<ul class="task-list">
+					<li class="task-item">
+						<div class="input-text-container">
+							<input
+								class="task-checkbox"
+								type="checkbox"
+								aria-checked="false"
+							/>
+							<span class="task-text"
+								>New task is created and added to the list</span
+							>
+						</div>
+						<button class="task-delete" type="button">
+							<img
+								class="delete__img"
+								src="../img/icons8-delete-128.png"
+								alt="delete"
+							/>
+						</button>
+					</li>
+				</ul>
+			</div>
 		</div>
 	</body>
 </html>
