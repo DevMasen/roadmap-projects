@@ -27,43 +27,37 @@ function renderList() {
 		.sort((a, b) => a.checked - b.checked)
 		.map(task => {
 			const htmlElement = `
-            		<li class="task-item" data-id="${task.id}">
-						<div class="input-text-container">
-							<input
-								class="task-checkbox"
-								type="checkbox"
-								aria-checked="false"
-                                ${task.checked ? 'checked' : ''}
-							/>
-							<span class="task-text${task.checked ? ' task-checked' : ''}"
-								>${task.text}</span
-							>
-						</div>
-						<button class="task-delete" type="button">
-							<img
-								class="delete__img"
-								src="../img/icons8-delete-128.png"
-								alt="delete"
-							/>
-						</button>
-					</li>
+            	<li class="task-item" data-id="${task.id}">
+					<div class="input-text-container">
+						<input
+							class="task-checkbox"
+							type="checkbox"
+							aria-checked="false"
+                            ${task.checked ? 'checked' : ''}
+						/>
+						<span class="task-text${task.checked ? ' task-checked' : ''}"
+							>${task.text}</span
+						>
+					</div>
+					<button class="task-delete" type="button">
+						<img
+							class="delete__img"
+							src="../img/icons8-delete-128.png"
+							alt="delete"
+						/>
+					</button>
+				</li>
             `;
 			taskList.insertAdjacentHTML('beforeend', htmlElement);
 		});
-	// console.log(tasks);
 }
 
 //! Event Handling
 
 //* preventing from reload page
 window.addEventListener('beforeunload', function (e) {
-	// Cancel the event
 	e.preventDefault();
-
-	// Chrome requires returnValue to be set
 	e.returnValue = '';
-
-	// The browser will show its own default confirmation dialog
 });
 
 //* submit the input
