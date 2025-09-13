@@ -41,6 +41,102 @@
 		<script src="./js/script.js" type="module" defer></script>
 	</head>
 	<body>
-		<div class="container"></div>
+		<div class="container">
+			<header class="header">
+				<img
+					src="https://img.icons8.com/ios-filled/50/FFFFFF/google-web-search.png"
+					alt="!"
+					class="logo"
+				/>
+				<h1 class="title">GitHub Repository Finder</h1>
+			</header>
+			<main class="main">
+				<div class="dropdown-container">
+					<div class="dropdown-selected">
+						<span class="selected-text">Select an Item</span>
+						<img
+							class="selected-arrow"
+							src="./img/icons8-arrow-down-100.png"
+							alt="🔽"
+						/>
+					</div>
+					<ul class="dropdown-select">
+						<li class="dropdown-option" data-id="1">
+							<span class="option-text">First Item</span>
+							<img
+								class="option-check"
+								src="./img/icons8-check-100.png"
+								alt="✅"
+							/>
+						</li>
+					</ul>
+				</div>
+				<div class="stats">
+					<p class="stats-wait">Please select a language</p>
+					<p class="stats-loading">Loading, please wait...</p>
+					<p class="stats-error">Error fetching repositories</p>
+				</div>
+				<button class="retry-btn" type="reset">Click to retry</button>
+				<div class="repo-result">
+					<div class="repo-header">
+						<h3 class="repo-name">driver.js</h3>
+						<a href="#" class="repo-link">
+							<img
+								width="50"
+								height="50"
+								src="https://img.icons8.com/sf-regular/50/FFFFFF/external-link.png"
+								alt="external-link"
+							/>
+						</a>
+					</div>
+					<p class="repo-description">
+						Lorem ipsum dolor sit amet consectetur adipisicing elit.
+						Repudiandae, error.
+					</p>
+					<div class="repo-footer">
+						<div class="language">
+							<img
+								width="12"
+								height="12"
+								src="https://img.icons8.com/forma-light-filled/50/ffffff/circled.png"
+								alt="circled"
+							/>
+							<span class="lang-name">JavaScript</span>
+						</div>
+						<div class="stars">
+							<img
+								width="12"
+								height="12"
+								src="https://img.icons8.com/ios-filled/100/FFFFFF/star--v1.png"
+								alt="stars-icon"
+								class="stars-icon"
+							/>
+							<span class="stars-count">123,233</span>
+						</div>
+						<div class="forks">
+							<img
+								width="12"
+								height="12"
+								src="https://img.icons8.com/hatch/64/FFFFFF/code-fork.png"
+								alt="forks-icon"
+								class="forks-icon"
+							/>
+							<span class="forks-count">1,233</span>
+						</div>
+						<div class="issues">
+							<img
+								width="12"
+								height="12"
+								src="https://img.icons8.com/external-sbts2018-solid-sbts2018/58/FFFFFF/external-issue-basic-ui-elements-2.5-sbts2018-solid-sbts2018.png"
+								alt="issue-icon"
+								class="issue-icon"
+							/>
+							<span class="issues-count">122</span>
+						</div>
+					</div>
+				</div>
+				<button class="refresh-btn" type="reset">Refresh</button>
+			</main>
+		</div>
 	</body>
 </html>
