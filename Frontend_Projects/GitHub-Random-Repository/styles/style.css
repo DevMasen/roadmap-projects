@@ -1,0 +1,59 @@
+/*! Styles  */
+/* :root {} */
+* {
+	box-sizing: border-box;
+	margin: 0;
+}
+body {
+	font-family: 'Courier New', Courier, monospace;
+	font-weight: 400;
+	font-style: normal;
+}
+.container {
+	max-width: 1320px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 1rem;
+	margin-bottom: 5rem;
+	padding: 1rem;
+}
+
+/*! Responsive UI */
+
+/* Extra Large (xl) - ≤1399px */
+@media (max-width: 1399.98px) {
+	.container {
+		max-width: 1140px;
+	}
+}
+
+/* Large (lg) - ≤1199px */
+@media (max-width: 1199.98px) {
+	.container {
+		max-width: 960px;
+		width: 60%;
+	}
+}
+
+/* Medium (md) - ≤991px */
+@media (max-width: 991.98px) {
+	.container {
+		max-width: 720px;
+		width: 75%;
+	}
+}
+
+/* Small (sm) - ≤767px */
+@media (max-width: 767.98px) {
+	.container {
+		max-width: 540px;
+		width: 90%;
+	}
+}
+
+/* Extra Small (xs) - ≤575px */
+@media (max-width: 575.98px) {
+	.container {
+		width: 100%;
+	}
+}
