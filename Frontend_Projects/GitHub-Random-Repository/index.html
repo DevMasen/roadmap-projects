@@ -37,6 +37,11 @@
 		<!-- Stylesheet -->
 		<link rel="stylesheet" href="./styles/style.css" />
 
+		<!-- Fonts -->
+		<style>
+			@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
+		</style>
+
 		<!-- External JavaScript -->
 		<script src="./js/script.js" type="module" defer></script>
 	</head>
@@ -53,7 +58,7 @@
 			<main class="main">
 				<div class="dropdown-container">
 					<div class="dropdown-selected">
-						<span class="selected-text">Select an Item</span>
+						<span class="selected-text">Select a Language</span>
 						<img
 							class="selected-arrow"
 							src="./img/icons8-arrow-down-100.png"
@@ -69,12 +74,22 @@
 								alt="✅"
 							/>
 						</li>
+						<li class="dropdown-option" data-id="1">
+							<span class="option-text">First Item</span>
+							<img
+								class="option-check"
+								src="./img/icons8-check-100.png"
+								alt="✅"
+							/>
+						</li>
 					</ul>
 				</div>
 				<div class="stats">
 					<p class="stats-wait">Please select a language</p>
-					<p class="stats-loading">Loading, please wait...</p>
-					<p class="stats-error">Error fetching repositories</p>
+					<p class="stats-loading hidden">Loading, please wait...</p>
+					<p class="stats-error hidden">
+						Error fetching repositories
+					</p>
 				</div>
 				<button class="retry-btn" type="reset">Click to retry</button>
 				<div class="repo-result">

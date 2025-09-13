@@ -2,16 +2,23 @@
 :root {
 	--color-00: #000;
 	--color-01: #fff;
+	--color-02: #232122;
+	--color-03: #e8c068;
+	--color-04: #d13d31;
+	--color-05: #2a2a2a;
+	--color-06: #cdd932;
+	--color-07: #061c27;
 }
 * {
 	box-sizing: border-box;
 	margin: 0;
 }
 body {
-	background-color: var(--color-00);
+	background-color: var(--color-02);
 	color: var(--color-01);
-	font-family: 'Courier New', Courier, monospace;
-	font-weight: 400;
+	font-family: 'Roboto Slab', serif;
+	font-optical-sizing: auto;
+	font-weight: normal;
 	font-style: normal;
 }
 ul {
@@ -26,10 +33,25 @@ a {
 	margin-right: auto;
 	margin-top: 1rem;
 	margin-bottom: 5rem;
-	padding: 1rem;
+	padding: 1rem 15rem;
 }
 .hidden {
 	display: none;
+}
+.header {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+}
+.logo {
+	width: 50px;
+	height: 50px;
+}
+.title {
+	font-size: 28px;
+}
+.main {
+	margin-top: 1rem;
 }
 /*! Dropdown Styles */
 .dropdown-container {
@@ -39,6 +61,7 @@ a {
 	display: flex;
 	flex-direction: column;
 	gap: 0.5rem;
+	justify-self: center;
 }
 .dropdown-selected,
 .dropdown-select {
@@ -56,7 +79,7 @@ a {
 	cursor: pointer;
 }
 .selected-text {
-	font-size: 24px;
+	font-size: 20px;
 }
 .selected-arrow {
 	width: 18px;
@@ -66,13 +89,13 @@ a {
 	transform: rotate(180deg);
 }
 .dropdown-select {
+	position: absolute;
+	top: 4rem;
 	height: 20rem;
 	border-radius: 0.8rem 0 0 0.8rem;
 	overflow: auto;
-	scrollbar-color: var(--color-01) var(--color-00);
-	position: absolute;
-	background-color: var(--color-00);
-	top: 4rem;
+	scrollbar-color: var(--color-01) var(--color-02);
+	background-color: var(--color-02);
 	transform: scaleY(0);
 	transform-origin: top;
 	transition: transform 100ms ease-in;
@@ -92,7 +115,7 @@ a {
 	border-bottom: none;
 }
 .option-text {
-	font-size: 20px;
+	font-size: 18px;
 }
 .option-check {
 	width: 24px;
@@ -101,6 +124,46 @@ a {
 .dropdown-option.selected .option-check {
 	display: block;
 }
+
+/*! Stats Styles */
+.stats {
+	margin-top: 1rem;
+	background-color: var(--color-06);
+	padding: 1rem;
+	border: 2px solid var(--color-01);
+	border-radius: 1rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.stats-wait {
+	color: var(--color-07);
+}
+.stats-loading {
+	color: var(--color-07);
+}
+.stats-error {
+	color: var(--color-04);
+}
+/* .retry-btn {} */
+/* .repo-result {} */
+/* .repo-header {} */
+/* .repo-name {} */
+/* .repo-link {} */
+/* .repo-description {} */
+/* .repo-footer {} */
+/* .language {} */
+/* .lang-name {} */
+/* .stars {} */
+/* .stars-icon {} */
+/* .stars-count {} */
+/* .forks {} */
+/* .forks-icon {} */
+/* .forks-count {} */
+/* .issues {} */
+/* .issue-icon {} */
+/* .issues-count {} */
+/* .refresh-btn {} */
 
 /*! Responsive UI */
 
