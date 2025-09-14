@@ -1,13 +1,17 @@
 /*! Styles  */
 :root {
 	--color-00: #000;
+	--color-00h: #141414;
 	--color-01: #fff;
 	--color-02: #232122;
 	--color-03: #e8c068;
 	--color-04: #d13d31;
+	--color-04h: #be3124;
+	--color-04e: #ffa9a1;
 	--color-05: #2a2a2a;
 	--color-06: #cdd932;
 	--color-07: #061c27;
+	--color-08: #e5e5e5b8;
 }
 * {
 	box-sizing: border-box;
@@ -33,7 +37,9 @@ a {
 	margin-right: auto;
 	margin-top: 1rem;
 	margin-bottom: 5rem;
-	padding: 1rem 15rem;
+	padding: 1rem 1rem;
+	display: grid;
+	justify-content: center;
 }
 .hidden {
 	display: none;
@@ -48,14 +54,16 @@ a {
 	height: 50px;
 }
 .title {
-	font-size: 28px;
+	font-size: 22px;
 }
 .main {
+	width: 20rem;
 	margin-top: 1rem;
+	display: grid;
 }
 /*! Dropdown Styles */
 .dropdown-container {
-	width: 20rem;
+	width: 100%;
 	position: relative;
 	min-width: 16rem;
 	display: flex;
@@ -108,7 +116,6 @@ a {
 	padding: 0.7rem 1rem;
 	display: flex;
 	align-items: center;
-	justify-content: space-between;
 	cursor: pointer;
 }
 .dropdown-option:last-child {
@@ -117,53 +124,143 @@ a {
 .option-text {
 	font-size: 18px;
 }
-.option-check {
-	width: 24px;
-	display: none;
-}
-.dropdown-option.selected .option-check {
-	display: block;
-}
 
 /*! Stats Styles */
 .stats {
+	color: var(--color-07);
+	width: 100%;
 	margin-top: 1rem;
-	background-color: var(--color-06);
+	background-color: var(--color-08);
 	padding: 1rem;
 	border: 2px solid var(--color-01);
 	border-radius: 1rem;
+	/* display: none; */
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	justify-self: center;
 }
-.stats-wait {
-	color: var(--color-07);
-}
-.stats-loading {
-	color: var(--color-07);
-}
+.stats-wait,
+.stats-loading,
 .stats-error {
+	display: none;
+}
+.stats.wait .stats-wait {
+	display: block;
+}
+.stats.loading .stats-loading {
+	display: block;
+}
+
+.stats.loading {
+	display: grid;
+	justify-content: center;
+}
+.loader {
+	margin-top: 1rem;
+	width: 10px;
+	aspect-ratio: 1;
+	border-radius: 50%;
+	animation: l5 1s infinite linear alternate;
+	justify-self: center;
+}
+.stats.error {
+	border: none;
+	background-color: var(--color-04e);
 	color: var(--color-04);
 }
-/* .retry-btn {} */
-/* .repo-result {} */
-/* .repo-header {} */
-/* .repo-name {} */
-/* .repo-link {} */
-/* .repo-description {} */
-/* .repo-footer {} */
-/* .language {} */
+.stats.error .stats-error {
+	display: block;
+}
+.button {
+	all: unset;
+	box-sizing: border-box;
+	width: 100%;
+	margin-top: 1rem;
+	padding: 1rem;
+	border-radius: 1rem;
+	cursor: pointer;
+	justify-self: center;
+	text-align: center;
+	transition: transform 100ms ease-in;
+	&:active {
+		transform: scale(0.9);
+	}
+}
+.retry-btn {
+	display: none;
+	/* display: block; */
+	background-color: var(--color-04);
+	&:hover {
+		background-color: var(--color-04h);
+	}
+}
+.repo-result {
+	margin-top: 1rem;
+	padding: 1rem;
+	border-radius: 1rem;
+	border: 2px solid var(--color-01);
+}
+.repo-header {
+	display: flex;
+	justify-content: space-between;
+}
+.repo-name {
+	font-weight: 400;
+}
+.repo-link {
+	display: block;
+	width: 25px;
+	height: 25px;
+	transition: transform 100ms ease-in;
+	&:active {
+		transform: scale(0.9);
+	}
+}
+.repo-link-img {
+	width: 100%;
+	height: 100%;
+}
+.repo-description {
+	margin-top: 0.5rem;
+	padding-left: 0.7rem;
+	font-weight: 300;
+	color: var(--color-08);
+}
+.repo-footer {
+	margin-top: 0.5rem;
+	font-size: 12px;
+	padding: 0 0.7rem;
+	display: flex;
+	justify-content: space-between;
+}
+.language,
+.issues,
+.forks,
+.stars {
+	display: flex;
+	align-items: center;
+	gap: 0.3rem;
+}
+.lang-icon,
+.stars-icon,
+.forks-icon,
+.issue-icon {
+	width: 12px;
+	height: 12px;
+}
 /* .lang-name {} */
-/* .stars {} */
-/* .stars-icon {} */
 /* .stars-count {} */
-/* .forks {} */
-/* .forks-icon {} */
 /* .forks-count {} */
-/* .issues {} */
-/* .issue-icon {} */
 /* .issues-count {} */
-/* .refresh-btn {} */
+.refresh-btn {
+	display: none;
+	/* display: block; */
+	background-color: var(--color-00);
+	&:hover {
+		background-color: var(--color-00h);
+	}
+}
 
 /*! Responsive UI */
 
@@ -202,5 +299,27 @@ a {
 @media (max-width: 575.98px) {
 	.container {
 		width: 100%;
+	}
+	.main {
+		width: 18rem;
+	}
+}
+
+@keyframes l5 {
+	0% {
+		box-shadow: 15px 0 #000, -15px 0 #0002;
+		background: #000;
+	}
+	33% {
+		box-shadow: 15px 0 #000, -15px 0 #0002;
+		background: #0002;
+	}
+	66% {
+		box-shadow: 15px 0 #0002, -15px 0 #000;
+		background: #0002;
+	}
+	100% {
+		box-shadow: 15px 0 #0002, -15px 0 #000;
+		background: #000;
 	}
 }

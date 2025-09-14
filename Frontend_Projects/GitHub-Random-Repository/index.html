@@ -24,13 +24,43 @@
 		<meta property="article:author" content="DevMasen" />
 
 		<!-- Favicon Tags -->
-		<link rel="icon" type="image/x-icon" href="" sizes="any" />
-		<link rel="icon" type="image/png" href="" sizes="32x32" />
-		<link rel="icon" type="image/png" href="" sizes="16x16" />
-		<link rel="apple-touch-icon" type="image/png" href="" sizes="180x180" />
-		<link rel="icon" type="image/png" href="" sizes="192x192" />
-		<link rel="icon" type="image/png" href="" sizes="512x512" />
-		<link rel="manifest" href="" />
+		<link
+			rel="icon"
+			type="image/x-icon"
+			href="./favicon/favicon.ico"
+			sizes="any"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			href="./favicon/favicon-32x32.png"
+			sizes="32x32"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			href="./favicon/favicon-16x16.png"
+			sizes="16x16"
+		/>
+		<link
+			rel="apple-touch-icon"
+			type="image/png"
+			href="./favicon/apple-touch-icon.png"
+			sizes="180x180"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			href="./favicon/android-chrome-192x192.png"
+			sizes="192x192"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			href="./favicon/android-chrome-512x512.png"
+			sizes="512x512"
+		/>
+		<link rel="manifest" href="./favicon/site.webmanifest" />
 
 		<title>GitHub Random Repository</title>
 
@@ -66,91 +96,75 @@
 						/>
 					</div>
 					<ul class="dropdown-select">
-						<li class="dropdown-option" data-id="1">
+						<!-- <li class="dropdown-option" data-id="1">
 							<span class="option-text">First Item</span>
 							<img
 								class="option-check"
 								src="./img/icons8-check-100.png"
 								alt="✅"
 							/>
-						</li>
-						<li class="dropdown-option" data-id="1">
-							<span class="option-text">First Item</span>
-							<img
-								class="option-check"
-								src="./img/icons8-check-100.png"
-								alt="✅"
-							/>
-						</li>
+						</li> -->
 					</ul>
 				</div>
-				<div class="stats">
+				<div class="stats wait">
 					<p class="stats-wait">Please select a language</p>
-					<p class="stats-loading hidden">Loading, please wait...</p>
-					<p class="stats-error hidden">
-						Error fetching repositories
-					</p>
+					<div class="stats-loading">
+						<p>Loading Please wait</p>
+						<div class="loader"></div>
+					</div>
+					<p class="stats-error"></p>
 				</div>
-				<button class="retry-btn" type="reset">Click to retry</button>
-				<div class="repo-result">
+				<button class="retry-btn button" type="reset">
+					Click to retry
+				</button>
+				<div class="repo-result hidden">
 					<div class="repo-header">
-						<h3 class="repo-name">driver.js</h3>
+						<h3 class="repo-name"></h3>
 						<a href="#" class="repo-link">
 							<img
-								width="50"
-								height="50"
 								src="https://img.icons8.com/sf-regular/50/FFFFFF/external-link.png"
 								alt="external-link"
+								class="repo-link-img"
 							/>
 						</a>
 					</div>
-					<p class="repo-description">
-						Lorem ipsum dolor sit amet consectetur adipisicing elit.
-						Repudiandae, error.
-					</p>
+					<p class="repo-description"></p>
 					<div class="repo-footer">
 						<div class="language">
 							<img
-								width="12"
-								height="12"
 								src="https://img.icons8.com/forma-light-filled/50/ffffff/circled.png"
 								alt="circled"
+								class="lang-icon"
 							/>
-							<span class="lang-name">JavaScript</span>
+							<span class="lang-name"></span>
 						</div>
 						<div class="stars">
 							<img
-								width="12"
-								height="12"
 								src="https://img.icons8.com/ios-filled/100/FFFFFF/star--v1.png"
 								alt="stars-icon"
 								class="stars-icon"
 							/>
-							<span class="stars-count">123,233</span>
+							<span class="stars-count"></span>
 						</div>
 						<div class="forks">
 							<img
-								width="12"
-								height="12"
 								src="https://img.icons8.com/hatch/64/FFFFFF/code-fork.png"
 								alt="forks-icon"
 								class="forks-icon"
 							/>
-							<span class="forks-count">1,233</span>
+							<span class="forks-count"></span>
 						</div>
 						<div class="issues">
 							<img
-								width="12"
-								height="12"
 								src="https://img.icons8.com/external-sbts2018-solid-sbts2018/58/FFFFFF/external-issue-basic-ui-elements-2.5-sbts2018-solid-sbts2018.png"
 								alt="issue-icon"
 								class="issue-icon"
 							/>
-							<span class="issues-count">122</span>
+							<span class="issues-count"></span>
 						</div>
 					</div>
 				</div>
-				<button class="refresh-btn" type="reset">Refresh</button>
+				<button class="refresh-btn button" type="reset">Refresh</button>
 			</main>
 		</div>
 	</body>
