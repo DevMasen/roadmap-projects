@@ -1,7 +1,7 @@
 'use strict';
 import langData from './data.js';
 
-// DOM Elements
+//! DOM Elements
 const dropdownSelected = document.querySelector('.dropdown-selected');
 const selectedText = document.querySelector('.selected-text');
 const dropdownContainer = document.querySelector('.dropdown-container');
@@ -19,10 +19,12 @@ const starsCount = document.querySelector('.stars-count');
 const forksCount = document.querySelector('.forks-count');
 const issuesCount = document.querySelector('.issues-count');
 
-// Global Variables
+//! Global Variables
 const numberFormat = new Intl.NumberFormat('en-US');
 
-// Functions
+//! Functions
+
+//* initial language options of dropdown
 function initLangData() {
 	langData.forEach((lang, index) => {
 		const liElement = `
@@ -34,6 +36,7 @@ function initLangData() {
 	});
 }
 
+//* updating result box UI
 function updateRepoResultUI(langItem) {
 	stats.classList.remove('loading');
 	stats.classList.add('wait');
@@ -48,6 +51,8 @@ function updateRepoResultUI(langItem) {
 	issuesCount.textContent = numberFormat.format(langItem.open_issues_count);
 	refreshBtn.style.display = 'block';
 }
+
+//* updating loading status UI
 function updateLoadingUI() {
 	stats.style.display = 'flex';
 	repoResult.classList.add('hidden');
@@ -58,6 +63,7 @@ function updateLoadingUI() {
 	stats.classList.add('loading');
 }
 
+//* updating error status UI
 function updateErrorUI(e) {
 	statsError.textContent = e.message;
 	stats.classList.remove('wait');
@@ -66,6 +72,7 @@ function updateErrorUI(e) {
 	retryBtn.style.display = 'block';
 }
 
+//* async function for fetching a repository data from api
 async function fetchLanguage(lang = '') {
 	try {
 		const response = await fetch(
@@ -91,39 +98,44 @@ async function fetchLanguage(lang = '') {
 				: randomIndex;
 		const langItem = data.items[index];
 
-		// updating ui
+		// updating result box UI
 		updateRepoResultUI(langItem);
 	} catch (e) {
-		// error status
+		// updating error status UI
 		updateErrorUI(e);
 	}
 }
 
+//* async function for getting repository data for selected option language
 async function getSelectedLangData(e) {
 	const selectedItem = e.target.closest('.dropdown-option');
 	const selectedLanguage =
 		selectedItem.querySelector('.option-text').textContent;
 
-	// update ui
+	// update selected option text in dropdown
 	selectedText.textContent = selectedLanguage;
 
-	// Fetching repo data
+	// fetching repository data for selected language and updating UI
 	fetchLanguage(selectedLanguage);
 }
 
+//* refresh the page for a new repository
 function refresh() {
 	const selectedLanguage = selectedText.textContent;
 	fetchLanguage(selectedLanguage);
 	updateLoadingUI();
 }
 
-// Initialization
+//! Initialization
 initLangData();
 
-// Events
+//! Events
+//* opening and closing dropdown on click
 dropdownSelected.addEventListener('click', () => {
 	dropdownContainer.classList.toggle('open');
 });
+
+//* selecting a language for fetching repository data
 dropdownSelect.addEventListener('click', e => {
 	// get clicked language data
 	getSelectedLangData(e);
@@ -131,7 +143,11 @@ dropdownSelect.addEventListener('click', e => {
 	// loading status
 	updateLoadingUI();
 });
+
+//* action on refresh button
 refreshBtn.addEventListener('click', refresh);
+
+//* action on retry button
 retryBtn.addEventListener('click', () => {
 	refresh();
 	retryBtn.style.display = 'none';

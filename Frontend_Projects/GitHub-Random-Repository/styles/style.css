@@ -1,15 +1,13 @@
 /*! Styles  */
 :root {
 	--color-00: #000;
+	--color-000: #0002;
 	--color-00h: #141414;
 	--color-01: #fff;
 	--color-02: #232122;
-	--color-03: #e8c068;
 	--color-04: #d13d31;
 	--color-04h: #be3124;
 	--color-04e: #ffa9a1;
-	--color-05: #2a2a2a;
-	--color-06: #cdd932;
 	--color-07: #061c27;
 	--color-08: #e5e5e5b8;
 }
@@ -249,10 +247,6 @@ a {
 	width: 12px;
 	height: 12px;
 }
-/* .lang-name {} */
-/* .stars-count {} */
-/* .forks-count {} */
-/* .issues-count {} */
 .refresh-btn {
 	display: none;
 	/* display: block; */
@@ -307,19 +301,19 @@ a {
 
 @keyframes l5 {
 	0% {
-		box-shadow: 15px 0 #000, -15px 0 #0002;
-		background: #000;
+		box-shadow: 15px 0 var(--color-00), -15px 0 var(--color-000);
+		background: var(--color-00);
 	}
 	33% {
-		box-shadow: 15px 0 #000, -15px 0 #0002;
-		background: #0002;
+		box-shadow: 15px 0 var(--color-00), -15px 0 var(--color-000);
+		background: var(--color-000);
 	}
 	66% {
-		box-shadow: 15px 0 #0002, -15px 0 #000;
-		background: #0002;
+		box-shadow: 15px 0 var(--color-000), -15px 0 var(--color-00);
+		background: var(--color-000);
 	}
 	100% {
-		box-shadow: 15px 0 #0002, -15px 0 #000;
-		background: #000;
+		box-shadow: 15px 0 var(--color-000), -15px 0 var(--color-00);
+		background: var(--color-00);
 	}
 }
