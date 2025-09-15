@@ -27,6 +27,7 @@
 -   Project 15 : [Flash Cards](https://roadmap.sh/projects/flash-cards)
 -   Project 16 : [Custom Dropdown](https://roadmap.sh/projects/custom-dropdown)
 -   Project 17 : [Task Tracker](https://roadmap.sh/projects/task-tracker-js)
+-   Project 18 : [GitHub Random Repository](https://roadmap.sh/projects/github-random-repo)
 
 ---
 
@@ -200,6 +201,16 @@
         <h2>Task Tracker</h2>
       </a>
       <p>A task tracker with a to-do list using JavaScript</p>
+    </td>
+  </tr>
+  <tr><td height="100px"></td></tr>
+  <tr>
+    <td align="center" valign="top">
+      <a href="./Frontend_Projects/GitHub-Random-Repository/">
+        <img src="./Frontend_Projects/GitHub-Random-Repository/img/banner-2.png" alt="Card 18" width="550px" />
+        <h2>GitHub Random Repository</h2>
+      </a>
+      <p>A GitHub random repository finder using GitHub API</p>
     </td>
   </tr>
 </table>
