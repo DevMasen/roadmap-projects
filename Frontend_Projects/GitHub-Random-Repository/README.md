@@ -1,6 +1,6 @@
 <h1 align="center"> GitHub Random Repository 🎲<h1>
 <p align="center">
-<img align="center" width="720px" src="./img/banner.png" alt="Banner Image">
+<img align="center" width="420px" src="./img/banner.png" alt="Banner Image">
 </p>
 
 ## A GitHub random repository finder using GitHub API
@@ -9,7 +9,12 @@
 
 ### In this project I used topics below:
 
--   ...
+-   Using CSS animation for loading status
+-   Using JavaScript module for separating data from main app
+-   Handling error status with try catch blocks and suitable UI
+-   Asynchronous JavaScript and fetch API for obtaining data for app
+-   Using previous component(custom dropdown) for better UI
+-   I used [GitHub Repository Search API](https://docs.github.com/en/rest/reference/search#search-repositories) for this project
 
 ### Use `live-server` on `index.html` path to see the result
 
