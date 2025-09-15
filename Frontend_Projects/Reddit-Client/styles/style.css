@@ -1,0 +1,60 @@
+:root {
+	--color-00: #000;
+	--color-01: #fff;
+}
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	background-color: var(--color-00);
+	color: var(--color-01);
+	font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.container {
+	max-width: 1320px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 1rem;
+	margin-bottom: 5rem;
+	padding: 1rem 1rem;
+	display: grid;
+	justify-content: center;
+}
+
+/*! Responsive UI */
+/* Extra Large (xl) - ≤1399px */
+@media (max-width: 1399.98px) {
+	.container {
+		max-width: 1140px;
+	}
+}
+
+/* Large (lg) - ≤1199px */
+@media (max-width: 1199.98px) {
+	.container {
+		max-width: 960px;
+	}
+}
+
+/* Medium (md) - ≤991px */
+@media (max-width: 991.98px) {
+	.container {
+		max-width: 720px;
+	}
+}
+
+/* Small (sm) - ≤767px */
+@media (max-width: 767.98px) {
+	.container {
+		max-width: 540px;
+	}
+}
+
+/* Extra Small (xs) - ≤575px */
+@media (max-width: 575.98px) {
+	.container {
+		width: 100%;
+	}
+}
