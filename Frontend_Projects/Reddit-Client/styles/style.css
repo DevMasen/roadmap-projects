@@ -14,20 +14,62 @@
 	box-sizing: border-box;
 }
 body {
-	background-color: var(--color-00);
+	font-family: 'Lexend Deca', sans-serif;
+	font-optical-sizing: auto;
+	font-weight: normal;
+	font-style: normal;
+	background-color: var(--color-02);
 	color: var(--color-01);
-	font-family: Georgia, 'Times New Roman', Times, serif;
 }
 .container {
 	max-width: 1320px;
 	margin-left: auto;
 	margin-right: auto;
-	margin-top: 1rem;
-	margin-bottom: 5rem;
-	padding: 1rem 1rem;
-	display: grid;
-	justify-content: center;
+	padding: 1rem 0;
+	display: flex;
+	flex-wrap: nowrap;
+	overflow-x: auto;
+	height: 100vh;
 }
+
+.hidden {
+	display: none;
+}
+
+.lanes-list {
+	background-color: var(--color-04);
+	display: flex;
+}
+/* .subreddit-lane {} */
+/* .lane-header {} */
+/* .lane-header-text {} */
+/* .subreddit-name {} */
+/* .lane-options {} */
+/* .options-btn {} */
+/* .options-btn-img {} */
+/* .options-list {} */
+/* .option-item {} */
+/* .lane-body {} */
+/* .lane-body-overlay {} */
+/* .lane-body-loader {} */
+/* .lane-body-error {} */
+/* .lane-body-error-message {} */
+/* .post-list {} */
+/* .post {} */
+/* .post-upv {} */
+/* .upv-icon {} */
+/* .upv-count {} */
+/* .post-title-author {} */
+/* .post-title {} */
+/* .post-author {} */
+/* .add-lane {} */
+/* .main-overlay {} */
+/* .main-loader {} */
+/* .add-lane-form {} */
+/* .add-lane-label {} */
+/* .submit-add-lane {} */
+/* .add-lane-error {} */
+/* .add-lane-error-message {} */
 
 /*! Responsive UI */
 /* Extra Large (xl) - ≤1399px */
