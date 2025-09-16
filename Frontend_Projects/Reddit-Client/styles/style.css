@@ -1,6 +1,12 @@
 :root {
 	--color-00: #000;
 	--color-01: #fff;
+	--color-02: #0e1113;
+	--color-03: #748791;
+	--color-04: #333d42;
+	--color-05: #80a9fd;
+	--color-06: #ae2c00;
+	--color-07: #ff4500;
 }
 * {
 	margin: 0;
