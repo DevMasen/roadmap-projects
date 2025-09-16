@@ -49,71 +49,48 @@
 	<body>
 		<div class="container">
 			<ul class="lanes-list">
-				<li class="subreddit-lane">
-					<section class="lane-header">
-						<div class="lane-header-text">
-							<span>/r/</span
-							><span class="subreddit-name"
-								>learnprogramming</span
-							>
-						</div>
-						<div class="lane-options">
-							<button class="options-btn">
-								<img
-									src="https://img.icons8.com/sf-black-filled/64/FFFFFF/menu-2.png"
-									alt="..."
-									class="options-btn-img"
-								/>
-							</button>
-							<ul class="options-list hidden">
-								<li class="option-item">Refresh</li>
-								<li class="option-item">Delete</li>
-							</ul>
-						</div>
-					</section>
-					<section class="lane-body">
-						<div class="lane-body-overlay hidden">
-							<div class="lane-body-loader hidden"></div>
-							<section class="lane-body-error hidden">
-								<span class="lane-body-error-message"></span>
-							</section>
-						</div>
-						<ul class="post-list">
-							<li class="post">
-								<div class="post-upv">
-									<img
-										src="https://img.icons8.com/external-creatype-glyph-colourcreatype/64/FFFFFF/external-arrow-interface-a2-creatype-glyph-colourcreatype-4.png"
-										alt="!"
-										class="upv-icon"
-									/>
-									<span class="upv-count">120</span>
-								</div>
-								<div class="post-title-author">
-									<h2 class="post-title">Post title here</h2>
-									<p class="post-author">sagpedar</p>
-								</div>
-							</li>
-						</ul>
-					</section>
-				</li>
+				<!-- rendered by script.js -->
 			</ul>
-			<button class="add-lane">+</button>
 
-			<section class="main-overlay hidden">
-				<div class="main-loader hidden"></div>
-				<form class="add-lane-form">
-					<label for="add-lane-input" class="add-lane-label"
-						>Enter the name of subreddit</label
-					>
-					<input type="text" id="add-lane-input" />
-					<button class="submit-add-lane" type="submit">
-						Add Subreddit
+			<div class="add-lane" id="lane-adder">
+				<div class="add-lane-before"></div>
+				<div class="add-lane-btn-background">
+					<button class="add-lane-btn" title="Add SubReddit">
+						<img
+							src="https://img.icons8.com/sf-black-filled/64/ff4500/plus.png"
+							alt="+"
+							class="add-lane-icon"
+						/>
 					</button>
-				</form>
-				<section class="add-lane-error hidden">
-					<span class="add-lane-error-message"></span>
+				</div>
+				<div class="add-lane-after"></div>
+			</div>
+
+			<form class="add-lane-form hidden">
+				<label for="add-lane-input" class="add-lane-label"
+					>Enter the name of subreddit</label
+				>
+				<input
+					type="text"
+					id="add-lane-input"
+					class="add-lane-input"
+					required
+					aria-required="true"
+				/>
+				<button class="submit-add-lane" type="submit">
+					Add Subreddit
+				</button>
+			</form>
+			<div class="main-loader-container hidden">
+				<div class="main-loader"></div>
+			</div>
+			<div class="add-lane-error-container hidden">
+				<section class="add-lane-error">
+					<!-- add open class -->
+					<span class="add-lane-error-message">Error!</span>
 				</section>
-			</section>
+			</div>
+			<section class="main-overlay hidden"></section>
 		</div>
 	</body>
 </html>
