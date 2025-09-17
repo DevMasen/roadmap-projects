@@ -1,3 +1,4 @@
+@import url('./fonts.css');
 :root {
 	--color-00: #000;
 	--color-01: #fff;
@@ -163,6 +164,7 @@ ul {
 	z-index: 5;
 }
 .lane-body-error-message {
+	text-wrap: nowrap;
 	position: absolute;
 	top: 50%;
 	left: 50%;
@@ -257,6 +259,27 @@ ul {
 	left: 50%;
 	transform: translate(-50%, -50%);
 	z-index: 10;
+}
+.close-add-lane-form {
+	position: absolute;
+	top: 2px;
+	right: 5px;
+	font-family: 'Lexend Deca', sans-serif;
+	font-size: 24px;
+	font-weight: 500;
+	width: 25px;
+	height: 25px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: none;
+	border: none;
+	cursor: pointer;
+	color: var(--color-01);
+	transition: transform 50ms ease-in;
+	&:active {
+		transform: scale(0.9);
+	}
 }
 .add-lane-label {
 	font-size: 26px;
@@ -358,18 +381,12 @@ ul {
 	border-radius: 1rem;
 	position: absolute;
 	z-index: 15;
-	transform: scale(0);
 	transition: transform 100ms ease-out;
+	display: grid;
+	place-items: center;
+	text-align: center;
 }
-.add-lane-error.open {
-	transform: scale(1);
-}
-.add-lane-error-message {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-}
+/* .add-lane-error-message {} */
 
 /*! Responsive UI */
 /* Extra Large (xl) - ≤1399px */

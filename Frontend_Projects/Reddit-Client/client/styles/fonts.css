@@ -1,0 +1,87 @@
+/* Lexend Deca Thin */
+@font-face {
+	font-family: 'Lexend Deca';
+	src: url('fonts/LexendDeca-Thin.ttf') format('truetype');
+	font-weight: 100;
+	font-style: normal;
+}
+
+/* Lexend Deca ExtraLight */
+@font-face {
+	font-family: 'Lexend Deca';
+	src: url('fonts/LexendDeca-ExtraLight.ttf') format('truetype');
+	font-weight: 200;
+	font-style: normal;
+}
+
+/* Lexend Deca Light */
+@font-face {
+	font-family: 'Lexend Deca';
+	src: url('fonts/LexendDeca-Light.ttf') format('truetype');
+	font-weight: 300;
+	font-style: normal;
+}
+
+/* Lexend Deca Regular */
+@font-face {
+	font-family: 'Lexend Deca';
+	src: url('fonts/LexendDeca-Regular.ttf') format('truetype');
+	font-weight: 400;
+	font-style: normal;
+}
+
+/* Lexend Deca Medium */
+@font-face {
+	font-family: 'Lexend Deca';
+	src: url('fonts/LexendDeca-Medium.ttf') format('truetype');
+	font-weight: 500;
+	font-style: normal;
+}
+
+/* Lexend Deca SemiBold */
+@font-face {
+	font-family: 'Lexend Deca';
+	src: url('fonts/LexendDeca-SemiBold.ttf') format('truetype');
+	font-weight: 600;
+	font-style: normal;
+}
+
+/* Lexend Deca Bold */
+@font-face {
+	font-family: 'Lexend Deca';
+	src: url('fonts/LexendDeca-Bold.ttf') format('truetype');
+	font-weight: 700;
+	font-style: normal;
+}
+
+/* Lexend Deca ExtraBold */
+@font-face {
+	font-family: 'Lexend Deca';
+	src: url('fonts/LexendDeca-ExtraBold.ttf') format('truetype');
+	font-weight: 800;
+	font-style: normal;
+}
+
+/* Lexend Deca Black */
+@font-face {
+	font-family: 'Lexend Deca';
+	src: url('fonts/LexendDeca-Black.ttf') format('truetype');
+	font-weight: 900;
+	font-style: normal;
+}
+
+/* Cal Sans Regular */
+@font-face {
+	font-family: 'Cal Sans';
+	src: url('fonts/CalSans-Regular.ttf') format('truetype');
+	font-weight: 400;
+	font-style: normal;
+}
+
+/* Poiret One Regular */
+@font-face {
+	font-family: 'Poiret One';
+	src: url('fonts/PoiretOne-Regular.ttf') format('truetype');
+	font-weight: 400;
+	font-style: normal;
+}
