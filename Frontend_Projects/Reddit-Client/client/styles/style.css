@@ -49,11 +49,14 @@ ul {
 }
 .subreddit-lane {
 	position: relative;
+	z-index: 5;
 	background-color: var(--color-04);
 	width: 20rem;
 	border: 2px solid var(--color-01);
-	border-radius: 1rem;
+	border-radius: 1rem 0 0 1rem;
 	padding: 1rem;
+	overflow-y: auto;
+	scrollbar-width: thin;
 }
 .lane-header {
 	display: flex;
@@ -151,25 +154,7 @@ ul {
 	transform: translate(-50%, -50%);
 	z-index: 10;
 }
-.lane-body-error {
-	width: 18rem;
-	height: 10rem;
-	border-radius: 1rem;
-	background-color: var(--color-08);
-	color: var(--color-06);
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	z-index: 5;
-}
-.lane-body-error-message {
-	text-wrap: nowrap;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-}
+
 /* .post-list {} */
 /* .post-item {} */
 .post-link {
@@ -195,15 +180,11 @@ ul {
 }
 .post-title-author {
 	width: 100%;
-	overflow-x: auto;
-	scrollbar-width: thin;
 }
 .post-title {
-	text-wrap: nowrap;
 	font-size: 16px;
 }
 .post-author {
-	text-wrap: nowrap;
 	font-size: 12px;
 	opacity: 0.8;
 }
@@ -211,11 +192,6 @@ ul {
 	background-color: var(--color-03);
 	display: grid;
 	grid-template-rows: 3fr 1fr 3fr;
-	transition: transform 150ms ease-in-out;
-	transform: translateX(-30px);
-}
-.add-lane.open {
-	transform: translateX(0);
 }
 .add-lane-before {
 	background-color: var(--color-02);

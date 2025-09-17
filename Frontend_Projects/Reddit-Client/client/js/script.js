@@ -13,6 +13,7 @@ const addLaneErrorMessage = document.querySelector('.add-lane-error-message');
 const mainLoaderContainer = document.querySelector('.main-loader-container');
 const closeAddLaneForm = document.querySelector('.close-add-lane-form');
 const addLaneInput = document.querySelector('.add-lane-input');
+const lanesList = document.querySelector('.lanes-list');
 
 //! Functions
 async function getSubreddit(subreddit = '', limit = 10) {
@@ -24,7 +25,7 @@ async function getSubreddit(subreddit = '', limit = 10) {
 		);
 		if (!response.ok) throw new Error(response.status);
 		const data = await response.json();
-		console.log(data);
+		return data;
 	} catch (e) {
 		addLaneErrorContianer.classList.remove('hidden');
 		addLaneError.classList.add('open');
@@ -32,19 +33,101 @@ async function getSubreddit(subreddit = '', limit = 10) {
 	}
 }
 
+function createPostList(subredditData = {}) {
+	let postItems = '';
+	subredditData.data.children.forEach(element => {
+		postItems =
+			postItems +
+			`<li class="post-item">
+                <a href="${element.data.url}" class="post-link">
+                    <div class="post-upv">
+                        <img
+                            src="./img/arrow-up.png"
+                            alt="!"
+                            class="upv-icon"
+                        />
+                        <span class="upv-count">${element.data.ups}</span>
+                    </div>
+                    <div class="post-title-author">
+                        <h4 class="post-title">
+                            ${element.data.title}
+                        </h4>
+                        <p class="post-author">${element.data.author}</p>
+                    </div>
+                </a>
+            </li>`;
+	});
+	const postList = `<ul class="post-list">${postItems}</ul>`;
+	return postList;
+}
+
+function openOptionList() {
+	document.querySelector('.options-list').classList.add('open');
+	document.querySelector('.lane-body-overlay').classList.remove('hidden');
+}
+function closeOptionList() {
+	document.querySelector('.options-list').classList.remove('open');
+	document.querySelector('.lane-body-overlay').classList.add('hidden');
+}
+
+function addLaneToList(subredditData = {}) {
+	const postList = createPostList(subredditData);
+	const subredditLaneItem = `
+    <li class="subreddit-lane">
+        <section class="lane-header">
+            <h3 class="lane-header-text">
+                <span>/r/</span
+                ><span class="subreddit-name"
+                    >${subredditData.data.children[0].data.subreddit}</span
+                >
+            </h3>
+            <div class="lane-options">
+                <button class="options-btn">
+                    <img
+                        src="./img/menu-2.png"
+                        alt="..."
+                        class="options-btn-img"
+                    />
+                </button>
+                <ul class="options-list">
+                    <!-- add class "open" -->
+                    <li class="option-item">
+                        <button class="refresh-btn option-btn">
+                            Refresh
+                        </button>
+                    </li>
+                    <li class="option-item">
+                        <button class="delete-btn option-btn">
+                            Delete
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="lane-body">
+            <div class="lane-body-overlay hidden"></div>
+            <div class="lane-body-loader hidden"></div>
+            ${postList}
+        </section>
+    </li>
+`;
+	lanesList.insertAdjacentHTML('beforeend', subredditLaneItem);
+}
+
 async function handleSubmit(e) {
 	e.preventDefault();
 	const subredditName = addLaneInput.value;
-	getSubreddit(subredditName);
+	addLaneInput.value = '';
+	addLaneForm.classList.add('hidden');
+	mainLoaderContainer.classList.remove('hidden');
+	const subredditData = await getSubreddit(subredditName);
+	mainLoaderContainer.classList.add('hidden');
+	if (!subredditData) return;
+	mainOverlay.classList.add('hidden');
+	addLaneToList(subredditData);
 }
 
 //! Events
-addLaneBtn.addEventListener('mouseenter', () => {
-	addLane.classList.add('open');
-});
-addLaneBtn.addEventListener('mouseleave', () => {
-	addLane.classList.remove('open');
-});
 addLaneBtn.addEventListener('click', () => {
 	mainOverlay.classList.remove('hidden');
 	addLaneForm.classList.remove('hidden');
@@ -62,66 +145,3 @@ closeAddLaneForm.addEventListener('click', () => {
 	mainOverlay.classList.add('hidden');
 });
 addLaneForm.addEventListener('submit', handleSubmit);
-
-const laneHTML = `
-<li class="subreddit-lane">
-    <section class="lane-header">
-        <h3 class="lane-header-text">
-            <span>/r/</span
-            ><span class="subreddit-name"
-                >learnprogramming</span
-            >
-        </h3>
-        <div class="lane-options">
-            <button class="options-btn">
-                <img
-                    src="./img/menu-2.png"
-                    alt="..."
-                    class="options-btn-img"
-                />
-            </button>
-            <ul class="options-list">
-                <!-- add class "open" -->
-                <li class="option-item">
-                    <button class="refresh-btn option-btn">
-                        Refresh
-                    </button>
-                </li>
-                <li class="option-item">
-                    <button class="delete-btn option-btn">
-                        Delete
-                    </button>
-                </li>
-            </ul>
-        </div>
-    </section>
-    <section class="lane-body">
-        <div class="lane-body-overlay hidden"></div>
-        <div class="lane-body-loader hidden"></div>
-        <section class="lane-body-error hidden">
-            <span class="lane-body-error-message">Error!</span>
-        </section>
-        <ul class="post-list"></ul>
-    </section>
-</li>
-`;
-const postHTML = `
-<li class="post-item">
-    <a href="#" class="post-link">
-        <div class="post-upv">
-            <img
-                src="./img/arrow-up.png"
-                alt="!"
-                class="upv-icon"
-            />
-            <span class="upv-count">120</span>
-        </div>
-        <div class="post-title-author">
-            <h4 class="post-title">
-                Post title here
-            </h4>
-            <p class="post-author">sagpedar</p>
-        </div>
-    </a>
-</li>
-`;
