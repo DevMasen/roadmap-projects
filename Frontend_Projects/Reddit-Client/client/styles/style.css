@@ -49,7 +49,7 @@ ul {
 }
 .subreddit-lane {
 	position: relative;
-	z-index: 5;
+	z-index: 0;
 	background-color: var(--color-04);
 	width: 20rem;
 	border: 2px solid var(--color-01);
@@ -71,7 +71,6 @@ ul {
 	font-weight: 500;
 }
 .lane-options {
-	position: relative;
 	width: 20px;
 	height: 20px;
 }
@@ -92,7 +91,8 @@ ul {
 /* .options-btn-img {} */
 .options-list {
 	position: absolute;
-	left: -160px;
+	z-index: 10;
+	left: 110px;
 	width: 10rem;
 	border-radius: 0.7rem;
 	transform: scale(0);
@@ -135,7 +135,7 @@ ul {
 	position: absolute;
 	top: 0;
 	left: 0;
-	z-index: 0;
+	z-index: 5;
 	width: 100%;
 	height: 100%;
 	border-radius: 1rem;
@@ -210,9 +210,7 @@ ul {
 	place-items: center;
 	cursor: pointer;
 }
-.add-lane-icon {
-	border-radius: 0 2rem 2rem 0;
-}
+/* .add-lane-icon {} */
 .add-lane-after {
 	background-color: var(--color-02);
 	border-radius: 2.3rem 0 0 0;
@@ -221,7 +219,7 @@ ul {
 	position: absolute;
 	top: 0;
 	left: 0;
-	z-index: 0;
+	z-index: 15;
 	width: 100%;
 	height: 100%;
 	backdrop-filter: blur(4px);
@@ -234,7 +232,7 @@ ul {
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	z-index: 10;
+	z-index: 25;
 }
 .close-add-lane-form {
 	position: absolute;
@@ -298,11 +296,11 @@ ul {
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	z-index: 5;
+	z-index: 20;
 }
 .main-loader {
 	position: absolute;
-	z-index: 10;
+	z-index: 25;
 	width: 50px;
 	aspect-ratio: 1;
 	display: grid;
@@ -356,7 +354,7 @@ ul {
 	padding: 1rem;
 	border-radius: 1rem;
 	position: absolute;
-	z-index: 15;
+	z-index: 20;
 	transition: transform 100ms ease-out;
 	display: grid;
 	place-items: center;

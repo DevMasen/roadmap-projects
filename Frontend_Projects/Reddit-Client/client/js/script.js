@@ -25,6 +25,7 @@ async function getSubreddit(subreddit = '', limit = 10) {
 		);
 		if (!response.ok) throw new Error(response.status);
 		const data = await response.json();
+		if (data.data.dist === 0) throw new Error('INVALID Subreddit!');
 		return data;
 	} catch (e) {
 		addLaneErrorContianer.classList.remove('hidden');
@@ -33,7 +34,7 @@ async function getSubreddit(subreddit = '', limit = 10) {
 	}
 }
 
-function createPostList(subredditData = {}) {
+function createPostItems(subredditData = {}) {
 	let postItems = '';
 	subredditData.data.children.forEach(element => {
 		postItems =
@@ -57,21 +58,11 @@ function createPostList(subredditData = {}) {
                 </a>
             </li>`;
 	});
-	const postList = `<ul class="post-list">${postItems}</ul>`;
-	return postList;
-}
-
-function openOptionList() {
-	document.querySelector('.options-list').classList.add('open');
-	document.querySelector('.lane-body-overlay').classList.remove('hidden');
-}
-function closeOptionList() {
-	document.querySelector('.options-list').classList.remove('open');
-	document.querySelector('.lane-body-overlay').classList.add('hidden');
+	return postItems;
 }
 
 function addLaneToList(subredditData = {}) {
-	const postList = createPostList(subredditData);
+	const postItems = createPostItems(subredditData);
 	const subredditLaneItem = `
     <li class="subreddit-lane">
         <section class="lane-header">
@@ -107,7 +98,7 @@ function addLaneToList(subredditData = {}) {
         <section class="lane-body">
             <div class="lane-body-overlay hidden"></div>
             <div class="lane-body-loader hidden"></div>
-            ${postList}
+            <ul class="post-list">${postItems}</ul>
         </section>
     </li>
 `;
@@ -119,6 +110,19 @@ async function handleSubmit(e) {
 	const subredditName = addLaneInput.value;
 	addLaneInput.value = '';
 	addLaneForm.classList.add('hidden');
+	const subredditNames = lanesList.querySelectorAll('.subreddit-name');
+	const subredditValid = [...subredditNames].every(
+		element =>
+			element.textContent.trim().toLowerCase() !==
+			subredditName.toLowerCase()
+	);
+	if (!subredditValid) {
+		addLaneErrorContianer.classList.remove('hidden');
+		addLaneError.classList.add('open');
+		addLaneErrorMessage.textContent = `Error ⚠️ : Subreddit already Exist!`;
+		mainOverlay.classList.remove('hidden');
+		return;
+	}
 	mainLoaderContainer.classList.remove('hidden');
 	const subredditData = await getSubreddit(subredditName);
 	mainLoaderContainer.classList.add('hidden');
@@ -145,3 +149,64 @@ closeAddLaneForm.addEventListener('click', () => {
 	mainOverlay.classList.add('hidden');
 });
 addLaneForm.addEventListener('submit', handleSubmit);
+lanesList.addEventListener('click', async function (e) {
+	if (e.target.classList.contains('options-btn-img')) {
+		const optionsList =
+			e.target.parentElement.parentElement.querySelector('.options-list');
+		optionsList.classList.add('open');
+		const laneBodyOverlay =
+			e.target.parentElement.parentElement.parentElement.parentElement.querySelector(
+				'.lane-body-overlay'
+			);
+		laneBodyOverlay.classList.remove('hidden');
+		const subredditLane =
+			e.target.parentElement.parentElement.parentElement.parentElement;
+		subredditLane.style.overflowY = 'hidden';
+	} else if (e.target.classList.contains('refresh-btn')) {
+		const optionsList = e.target.parentElement.parentElement;
+		optionsList.classList.remove('open');
+		const postList =
+			e.target.parentElement.parentElement.parentElement.parentElement.parentElement.querySelector(
+				'.post-list'
+			);
+		postList.innerHTMl = '';
+		const subredditName =
+			e.target.parentElement.parentElement.parentElement.parentElement.querySelector(
+				'.subreddit-name'
+			).textContent;
+		const laneBodyOverlay =
+			e.target.parentElement.parentElement.parentElement.parentElement.parentElement.querySelector(
+				'.lane-body-overlay'
+			);
+		laneBodyOverlay.classList.remove('hidden');
+		const laneBodyLoader =
+			e.target.parentElement.parentElement.parentElement.parentElement.parentElement.querySelector(
+				'.lane-body-loader'
+			);
+		laneBodyLoader.classList.remove('hidden');
+		const subredditData = await getSubreddit(subredditName);
+		laneBodyOverlay.classList.add('hidden');
+		laneBodyLoader.classList.add('hidden');
+		const subredditLane =
+			e.target.parentElement.parentElement.parentElement.parentElement
+				.parentElement;
+		subredditLane.style.overflowY = 'auto';
+		const postItems = createPostItems(subredditData);
+		postList.innerHTMl = postItems;
+	} else if (e.target.classList.contains('delete-btn')) {
+		const laneToDelete =
+			e.target.parentElement.parentElement.parentElement.parentElement
+				.parentElement;
+		laneToDelete.remove();
+	} else if (e.target.classList.contains('lane-body-overlay')) {
+		const laneBodyLoader =
+			e.target.parentElement.querySelector('.lane-body-loader');
+		if (!laneBodyLoader.classList.contains('hidden')) return;
+		e.target.classList.add('hidden');
+		const subredditLane = e.target.parentElement.parentElement;
+		subredditLane.style.overflowY = 'auto';
+		const optionsList =
+			e.target.parentElement.parentElement.querySelector('.options-list');
+		optionsList.classList.remove('open');
+	}
+});
