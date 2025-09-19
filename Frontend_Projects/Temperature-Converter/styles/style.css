@@ -1,0 +1,52 @@
+/* :root{} */
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+body {
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+		'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.container {
+	max-width: 1320px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 1rem 0;
+}
+
+/*! Responsive UI */
+/* Extra Large (xl) - ≤1399px */
+@media (max-width: 1399.98px) {
+	.container {
+		max-width: 1140px;
+	}
+}
+
+/* Large (lg) - ≤1199px */
+@media (max-width: 1199.98px) {
+	.container {
+		max-width: 960px;
+	}
+}
+
+/* Medium (md) - ≤991px */
+@media (max-width: 991.98px) {
+	.container {
+		max-width: 720px;
+	}
+}
+
+/* Small (sm) - ≤767px */
+@media (max-width: 767.98px) {
+	.container {
+		max-width: 540px;
+	}
+}
+
+/* Extra Small (xs) - ≤575px */
+@media (max-width: 575.98px) {
+	.container {
+		width: 100%;
+	}
+}

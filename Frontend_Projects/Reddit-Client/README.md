@@ -16,9 +16,9 @@
 -   Handling loading states
 -   Using local storage for saving user data and restore on reloading
 
-### Use `live-server` on `index.html` path to see the result
+### Install project dependencies use command `npm install` on `server` path
 
-### `live-server` global installation with npm : `npm install -g live-server`
+### Use `npm start` on `server` path to see the result
 
 ### Please vote for the project with [THIS URL](https://roadmap.sh/projects/reddit-client/solutions?u=66107474da1671f986289b45) if it was useful.
 
