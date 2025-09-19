@@ -15,7 +15,26 @@ const closeAddLaneForm = document.querySelector('.close-add-lane-form');
 const addLaneInput = document.querySelector('.add-lane-input');
 const lanesList = document.querySelector('.lanes-list');
 
+//! Global Variables
+const dataList = [];
+
+//! restoring data when website loads
+window.addEventListener('load', e => {
+	e.preventDefault();
+	JSON.parse(localStorage.getItem('dataList')).forEach(data =>
+		dataList.push(data)
+	);
+	renderLanes(dataList);
+});
+
 //! Functions
+
+function renderLanes(dataList = []) {
+	dataList.forEach(data => {
+		addLaneToList(data);
+	});
+}
+
 async function getSubreddit(subreddit = '', limit = 10) {
 	try {
 		const response = await fetch(
@@ -26,6 +45,7 @@ async function getSubreddit(subreddit = '', limit = 10) {
 		if (!response.ok) throw new Error(response.status);
 		const data = await response.json();
 		if (data.data.dist === 0) throw new Error('INVALID Subreddit!');
+		dataList.push(data);
 		return data;
 	} catch (e) {
 		addLaneErrorContianer.classList.remove('hidden');
@@ -197,7 +217,19 @@ lanesList.addEventListener('click', async function (e) {
 		const laneToDelete =
 			e.target.parentElement.parentElement.parentElement.parentElement
 				.parentElement;
+
 		laneToDelete.remove();
+
+		// delete lane from dataList
+		const laneToDeleteName = laneToDelete
+			.querySelector('.subreddit-name')
+			.textContent.trim();
+		const index = dataList.findIndex(
+			data => data.data.children[0].data.subreddit === laneToDeleteName
+		);
+		if (index !== -1) {
+			dataList.splice(index, 1);
+		}
 	} else if (e.target.classList.contains('lane-body-overlay')) {
 		const laneBodyLoader =
 			e.target.parentElement.querySelector('.lane-body-loader');
@@ -209,4 +241,8 @@ lanesList.addEventListener('click', async function (e) {
 			e.target.parentElement.parentElement.querySelector('.options-list');
 		optionsList.classList.remove('open');
 	}
+});
+window.addEventListener('beforeunload', e => {
+	e.preventDefault();
+	localStorage.setItem('dataList', JSON.stringify(dataList));
 });
