@@ -28,6 +28,7 @@
 -   Project 16 : [Custom Dropdown](https://roadmap.sh/projects/custom-dropdown)
 -   Project 17 : [Task Tracker](https://roadmap.sh/projects/task-tracker-js)
 -   Project 18 : [GitHub Random Repository](https://roadmap.sh/projects/github-random-repo)
+-   project 19 : [Reddit Client](https://roadmap.sh/projects/reddit-client)
 
 ---
 
@@ -211,6 +212,16 @@
         <h2>GitHub Random Repository</h2>
       </a>
       <p>A GitHub random repository finder using GitHub API</p>
+    </td>
+  </tr>
+  <tr><td height="100px"></td></tr>
+  <tr>
+    <td align="center" valign="top">
+      <a href="./Frontend_Projects/Reddit-Client/">
+        <img src="./Frontend_Projects/Reddit-Client/client/img/banner-2.png" alt="Card 19" width="550px" />
+        <h2>Reddit Client</h2>
+      </a>
+      <p>A Reddit client with customizable subreddit lanes</p>
     </td>
   </tr>
 </table>
