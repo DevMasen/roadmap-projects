@@ -5,9 +5,29 @@ const initialUnitInput = document.querySelector('#initial-unit-input');
 const dropdownSelectedList = document.querySelectorAll('.dropdown-selected');
 const dropdownSelectList = document.querySelectorAll('.dropdown-select');
 const sourceUnitDropdown = document.querySelector('.source-unit-dropdown');
+const sourceUnitText = sourceUnitDropdown.querySelector('.selected-text');
 const destinationUnitDropdown = document.querySelector(
 	'.destination-unit-dropdown'
 );
+const destinationUnitText =
+	destinationUnitDropdown.querySelector('.selected-text');
+const convertBtn = document.querySelector('.convert-btn');
+const converterForm = document.querySelector('.converter-form');
+const resultError = document.querySelector('.result-error');
+const resultErrorMessage = document.querySelector('.result-error-message');
+const resultText = document.querySelector('.result-text');
+const resultInitialValue = document.querySelector('.result-initial-value');
+const resultSourceUnit = document.querySelector('.result-source-unit');
+const resultConvertedValue = document.querySelector('.result-converted-value');
+const resultDestinationUnit = document.querySelector(
+	'.result-destination-unit'
+);
+
+//! Global Variables
+const formatted = new Intl.NumberFormat('en-US', {
+	minimumFractionDigits: 2,
+	maximumFractionDigits: 2,
+});
 
 //! Functions
 //* verification function on input
@@ -95,6 +115,39 @@ function makeNumericInput(input, { decimals = 2, allowNegative = false } = {}) {
 	input.addEventListener('blur', onBlur);
 }
 
+function checkFields() {
+	if (initialUnitInput.value.trim() === '') return false;
+	if (sourceUnitText.textContent.trim().toLowerCase() === 'from unit')
+		return false;
+	if (destinationUnitText.textContent.trim().toLowerCase() === 'to unit')
+		return false;
+	return true;
+}
+
+function kelvinToCelseus() {
+	return formatted.format(+initialUnitInput.value - 273.15);
+}
+
+function kelvinToFahrenheit() {
+	return formatted.format((+initialUnitInput.value - 273.15) * 1.8 + 32);
+}
+
+function celseusToKelvin() {
+	return formatted.format(+initialUnitInput.value + 273.15);
+}
+
+function celseusToFahrenheit() {
+	return formatted.format(+initialUnitInput.value * 1.8 + 32);
+}
+
+function fahrenheitToKelvin() {
+	return formatted.format((5 / 9) * +initialUnitInput.value + 459.67);
+}
+
+function fahrenheitToCelseus() {
+	return formatted.format((+initialUnitInput.value - 32) * (5 / 9));
+}
+
 //! Initialization
 makeNumericInput(initialUnitInput, { decimals: 2, allowNegative: true });
 
@@ -106,7 +159,7 @@ makeNumericInput(initialUnitInput, { decimals: 2, allowNegative: true });
 	})
 );
 
-//* selectiong units
+//* selecting units
 [...dropdownSelectList].forEach(element =>
 	element.addEventListener('click', function (e) {
 		const selectedItem = e.target.closest('.dropdown-option');
@@ -119,5 +172,57 @@ makeNumericInput(initialUnitInput, { decimals: 2, allowNegative: true });
 		selectedText.textContent =
 			selectedItem.querySelector('.option-text').textContent;
 		this.parentElement.classList.remove('open');
+
+		// check all inputs to be filled
+		const isAllFilled = checkFields();
+		if (isAllFilled) convertBtn.classList.remove('hidden');
 	})
 );
+
+initialUnitInput.addEventListener('input', function () {
+	const isAllFilled = checkFields();
+	if (isAllFilled) convertBtn.classList.remove('hidden');
+	if (this.value.trim() === '') convertBtn.classList.add('hidden');
+});
+
+converterForm.addEventListener('submit', e => {
+	e.preventDefault();
+	const sourceUnit = sourceUnitText.textContent.trim().toLowerCase();
+	const destinationUnit = destinationUnitText.textContent
+		.trim()
+		.toLowerCase();
+	try {
+		if (+initialUnitInput.value < 0 && sourceUnit === 'kelvin')
+			throw new Error("Kelvin CAN'T be less than zero !");
+		if (+initialUnitInput.value < -273.15 && sourceUnit === 'celseus')
+			throw new Error("Celceus CAN'T be less than -273.153 !");
+		if (+initialUnitInput.value < -459.67 && sourceUnit === 'fahrenheit')
+			throw new Error("Fahrenheit CAN'T be less than -459.67 !");
+	} catch (e) {
+		resultError.classList.remove('hidden');
+		resultErrorMessage.textContent = e.message;
+		return;
+	}
+	resultError.classList.add('hidden');
+	const calculatedTemp =
+		sourceUnit === destinationUnit
+			? formatted.format(+initialUnitInput.value)
+			: sourceUnit === 'kelvin' && destinationUnit === 'celseus'
+			? kelvinToCelseus()
+			: sourceUnit === 'kelvin' && destinationUnit === 'fahrenheit'
+			? kelvinToFahrenheit()
+			: sourceUnit === 'celseus' && destinationUnit === 'kelvin'
+			? celseusToKelvin()
+			: sourceUnit === 'celseus' && destinationUnit === 'fahrenheit'
+			? celseusToFahrenheit()
+			: sourceUnit === 'fahrenheit' && destinationUnit === 'kelvin'
+			? fahrenheitToKelvin()
+			: sourceUnit === 'fahrenheit' && destinationUnit === 'celseus'
+			? fahrenheitToCelseus()
+			: '';
+	resultText.classList.remove('hidden');
+	resultInitialValue.textContent = initialUnitInput.value;
+	resultSourceUnit.textContent = sourceUnit;
+	resultConvertedValue.textContent = calculatedTemp;
+	resultDestinationUnit.textContent = destinationUnit;
+});
