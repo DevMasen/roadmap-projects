@@ -39,13 +39,19 @@
 		<link rel="stylesheet" href="./styles/style.css" />
 
 		<!-- Fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Bungee&family=Cal+Sans&display=swap"
+			rel="stylesheet"
+		/>
 
 		<!-- External JavaScript -->
 		<script src="./js/script.js" defer></script>
 	</head>
 	<body>
 		<div class="container">
-			<h1 class="title">Tempratrue Converter</h1>
+			<h1 class="title">Temperature Converter</h1>
 			<p class="title-more">
 				Enter the temprature, select units and submit
 			</p>
@@ -136,15 +142,24 @@
 					</ul>
 				</div>
 
-				<button class="convert-btn" type="submit">Convert</button>
+				<button class="convert-btn hidden" type="submit">
+					Convert
+				</button>
 			</form>
 
 			<section class="result">
-				<p class="result-text">
-					<span class="result-initial-value">34</span>
-					<span class="result-source-unit">Celseus</span> is
-					<strong class="result-converted-value">93.2</strong>
-					<span class="result-destination-value">Fahrenheit</span>
+				<p class="result-text hidden">
+					<span class="result-initial-value"></span>
+					<span class="result-source-unit"></span> is
+					<strong class="result-converted-value"></strong>
+					<span class="result-destination-unit"></span>
+				</p>
+				<p class="result-error hidden">
+					ERROR! (
+					<span class="result-error-message"
+						>Invalid Temperature</span
+					>
+					)
 				</p>
 			</section>
 		</div>
