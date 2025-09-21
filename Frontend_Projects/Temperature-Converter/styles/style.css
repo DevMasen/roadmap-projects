@@ -94,6 +94,7 @@ body {
 	position: absolute;
 	top: 69px;
 	left: 0;
+	z-index: 10;
 }
 .dropdown-container.open .dropdown-select {
 	transform: scaleY(1);
@@ -139,10 +140,10 @@ body {
 }
 .result {
 	margin-top: 2rem;
+	font-size: 28px;
 }
 .result-text {
 	display: block;
-	font-size: 28px;
 }
 .result-initial-value {
 	color: red;
@@ -155,7 +156,6 @@ body {
 
 .result-error {
 	display: block;
-	font-size: 28px;
 	color: red;
 }
 /* .result-error-message {} */
@@ -180,6 +180,9 @@ body {
 	.container {
 		max-width: 720px;
 	}
+	.dropdown-container {
+		min-width: 14rem;
+	}
 }
 
 /* Small (sm) - ≤767px */
@@ -187,11 +190,47 @@ body {
 	.container {
 		max-width: 540px;
 	}
+	.title {
+		font-size: 42px;
+	}
+	.title-more {
+		font-size: 22px;
+	}
+	.converter-form {
+		flex-direction: column;
+	}
 }
 
 /* Extra Small (xs) - ≤575px */
 @media (max-width: 575.98px) {
 	.container {
 		width: 100%;
+	}
+	.title {
+		font-size: 32px;
+		padding: 0 1rem;
+	}
+	.title-more {
+		font-size: 18px;
+		padding: 0 1em;
+	}
+	.converter-form {
+		padding: 0 1rem;
+	}
+	.selected-text {
+		font-size: 20px;
+	}
+	.option-text {
+		font-size: 18px;
+	}
+	.convert-btn {
+		font-size: 20px;
+	}
+	.result {
+		padding: 0 1rem;
+		font-size: 20px;
+	}
+	#initial-unit-input {
+		font-size: 20px;
 	}
 }
