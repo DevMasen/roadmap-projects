@@ -29,6 +29,7 @@
 -   Project 17 : [Task Tracker](https://roadmap.sh/projects/task-tracker-js)
 -   Project 18 : [GitHub Random Repository](https://roadmap.sh/projects/github-random-repo)
 -   project 19 : [Reddit Client](https://roadmap.sh/projects/reddit-client)
+-   project 20 : [Temperature Converter](https://roadmap.sh/projects/temperature-converter)
 
 ---
 
@@ -222,6 +223,16 @@
         <h2>Reddit Client</h2>
       </a>
       <p>A Reddit client with customizable subreddit lanes</p>
+    </td>
+  </tr>
+  <tr><td height="100px"></td></tr>
+  <tr>
+    <td align="center" valign="top">
+      <a href="./Frontend_Projects/Temperature-Converter/">
+        <img src="./Frontend_Projects/Temperature-Converter/img/banner-2.png" alt="Card 20" width="550px" />
+        <h2>Temperature Converter</h2>
+      </a>
+      <p>A temperature converter that converts between different units</p>
     </td>
   </tr>
 </table>

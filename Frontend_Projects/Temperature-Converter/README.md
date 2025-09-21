@@ -1,6 +1,6 @@
-<h1 align="center"> Temprature Converter 🌡️<h1>
+<h1 align="center"> Temperature Converter 🌡️<h1>
 <p align="center">
-<img align="center" width="620px" src="./client/img/banner.png" alt="Banner Image">
+<img align="center" width="620px" src="./img/banner.png" alt="Banner Image">
 </p>
 
 ## A temperature converter that converts between different units
@@ -9,7 +9,10 @@
 
 ### In this project I used topics below:
 
--   ...
+-   DOM manipulation
+-   Form handling
+-   Basic Calculation
+-   Conditional rendering elements
 
 ### Use `live-server` on `index.html` path to see the result
 
